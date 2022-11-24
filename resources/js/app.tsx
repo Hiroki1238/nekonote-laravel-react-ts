@@ -23,3 +23,9 @@ createInertiaApp({
 });
 
 InertiaProgress.init({ color: "#4B5563" });
+
+function App() {
+    return <>Hello, World!</>;
+  }
+  
+  export default App;
