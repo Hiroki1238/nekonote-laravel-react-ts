@@ -1,10 +1,26 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import Authenticated from "@/Layouts/Authenticated";
+import Guest from "@/Layouts/Guest";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const Index = (props : any) => {
+const {user,auth} = props;
+ 
+  return (
+    <div>
+ {  auth.user != null ? (
+<Authenticated auth={auth} >
+  
+</Authenticated>
+ ):(
+ <Guest>
+   
+<div>hello</div>
+
+</Guest>
+)}
+   
+    </div>
+ );
+}
+
+export default Index

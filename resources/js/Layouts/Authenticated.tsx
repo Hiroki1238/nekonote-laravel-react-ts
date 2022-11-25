@@ -6,8 +6,8 @@ import ResponsiveNavLink from "@/Components/ResponsiveNavLink";
 import { Link } from "@inertiajs/inertia-react";
 
 interface Props {
-    auth: any;
-    header: React.ReactNode;
+    auth?: any;
+    header?: React.ReactNode;
     children: React.ReactNode;
 }
 
