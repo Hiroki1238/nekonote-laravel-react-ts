@@ -2,13 +2,20 @@ import "./bootstrap";
 import "../css/app.css";
 
 import React from "react";
-import { render } from "react-dom";
 import { createInertiaApp } from "@inertiajs/inertia-react";
 import { InertiaProgress } from "@inertiajs/progress";
 import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
 import { createRoot } from 'react-dom/client';
-
-
+//const container = document.getElementById('app');
+//const root = createRoot(container!); // createRoot(container!) if you use TypeScript
+//root.render(<App tab="home" />);
+function AppWithCallbackAfterRender() {
+    return <App />
+  }
+  
+  const container = document.getElementById('app');
+  const root = createRoot(container!);
+  root.render(<AppWithCallbackAfterRender />);
 
 
 const appName =
@@ -22,7 +29,7 @@ createInertiaApp({
             import.meta.glob("./Pages/**/*.tsx")
         ),
     setup({ el, App, props }) {
-        return render(<App {...props} />, el);
+        return root.render(<App {...props} />);
     },
 });
 

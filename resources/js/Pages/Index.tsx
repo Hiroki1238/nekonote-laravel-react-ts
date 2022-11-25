@@ -1,10 +1,6 @@
 import React from 'react';
 import Authenticated from "@/Layouts/Authenticated";
 import Guest from "@/Layouts/Guest";
-import { createRoot } from 'react-dom/client';
-
-
-
 
 const Index :any = (props : any) => {
 const {user,auth} = props;
@@ -13,16 +9,14 @@ const {user,auth} = props;
     <div>
  {  auth.user != null ? (
 <Authenticated auth={auth} >
-  aa
+<p>aaa</p>
 </Authenticated>
  ):(
  <Guest>
-   
-<p className="mt-40">aaa</p>
+<p>aaa</p>
 </Guest>
 
-)}
-   
+)} 
     </div>
  );
 }
