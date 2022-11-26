@@ -8,7 +8,9 @@ import { Head, Link, useForm } from "@inertiajs/inertia-react";
 
 export default function Register() {
     const { data, setData, post, processing, errors, reset } = useForm({
-        name: "",
+        first_name: "",
+        last_name: "",
+        user_name: "",
         email: "",
         password: "",
         password_confirmation: "",
@@ -22,7 +24,7 @@ export default function Register() {
 
     const onHandleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setData(
-            event.target.name as "email" | "password" | "name",
+            event.target.name as "email" | "password" | "user_name" | "first_name" | "last_name",
             event.target.type === "checkbox"
                 ? event.target.checked + ""
                 : event.target.value
@@ -43,12 +45,42 @@ export default function Register() {
 
             <form onSubmit={submit}>
                 <div>
-                    <Label forInput="name" value="Name" />
+                    <Label forInput="first_name" value="氏" />
 
                     <Input
                         type="text"
                         name="name"
-                        value={data.name}
+                        value={data.first_name}
+                        className="mt-1 block w-full"
+                        autoComplete="name"
+                        isFocused={true}
+                        handleChange={onHandleChange}
+                        required
+                    />
+                </div>
+
+                <div>
+                    <Label forInput="last_name" value="名" />
+
+                    <Input
+                        type="text"
+                        name="name"
+                        value={data.last_name}
+                        className="mt-1 block w-full"
+                        autoComplete="name"
+                        isFocused={true}
+                        handleChange={onHandleChange}
+                        required
+                    />
+                </div>
+
+                <div>
+                    <Label forInput="user_name" value="アカウント名" />
+
+                    <Input
+                        type="text"
+                        name="name"
+                        value={data.user_name}
                         className="mt-1 block w-full"
                         autoComplete="name"
                         isFocused={true}
@@ -58,7 +90,7 @@ export default function Register() {
                 </div>
 
                 <div className="mt-4">
-                    <Label forInput="email" value="Email" />
+                    <Label forInput="email" value="Eメール" />
 
                     <Input
                         type="email"
@@ -72,7 +104,7 @@ export default function Register() {
                 </div>
 
                 <div className="mt-4">
-                    <Label forInput="password" value="Password" />
+                    <Label forInput="password" value="パスワード" />
 
                     <Input
                         type="password"
@@ -88,7 +120,7 @@ export default function Register() {
                 <div className="mt-4">
                     <Label
                         forInput="password_confirmation"
-                        value="Confirm Password"
+                        value="パスワードの確認"
                     />
 
                     <Input
@@ -110,7 +142,7 @@ export default function Register() {
                     </Link>
 
                     <Button
-                        className="ml-4 bg-gray-900"
+                        className="ml-4 bg-white text-blue-400 mr-3 border-blue-400 border-2"
                         processing={processing}
                     >
                         新規登録する
