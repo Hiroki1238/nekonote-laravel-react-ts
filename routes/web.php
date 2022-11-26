@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\GroupController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,11 +38,11 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::controller(GroupController::class)->group(function () {
-    Route::get("/group", "Group/Index");
+    Route::get("/group", "index");
 });
 
 Route::controller(HomeController::class)->group(function () {
-    Route::get("/", "Home/Index");
+    Route::get("/", "index");
 });
 
 // Route::get('/test', function () {
