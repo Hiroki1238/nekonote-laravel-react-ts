@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
 {
@@ -20,7 +21,7 @@ class UserSeeder extends Seeder
             'first_name' => 'ネコ',
             'user_name' => 'いぬ',
             'email' => 'aaa@gmail.com',
-            'password' => 'aaiiuueeoo',
+            'password' => Hash::make('aaiiuueeoo'),
             'image_path' => null,
             'vehicle_id' => null,
         ]);
