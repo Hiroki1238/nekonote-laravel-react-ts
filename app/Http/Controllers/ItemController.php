@@ -9,11 +9,7 @@ class ItemController extends Controller
 {
     public function index()
     {
-        return Inertia::render('Items/Index'); 
+        return Inertia::render('Groups/Items'); 
     }
 
-    public function show()
-    {
-        return Inertia::render('Items/Show'); 
-    }
 }

@@ -1,5 +1,7 @@
 import React, { Children } from 'react';
 import Authenticated from "@/Layouts/Authenticated";
+import { Link } from "@inertiajs/inertia-react";
+
 
 interface Props {
     children: React.ReactNode;
@@ -18,10 +20,13 @@ interface IndexProps {
    
     return (
       <div>
-  Task
   <Authenticated auth={auth} >
     <div>
-  <img src="https://kao-h.assetsadobe3.com/is/image/content/dam/sites/kao/www-kao-co-jp/cat-health/common/images/disease/cat_image1.jpeg?fmt=jpeg&qlt=85&wid=1680"/>
+  <div>
+      <Link href="/groups">所属しているグループ</Link>
+  </div>
+
+
   </div>
   </Authenticated>
    
