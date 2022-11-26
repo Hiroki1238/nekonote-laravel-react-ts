@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\GroupController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,20 +37,26 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/test', function () {
-    return Inertia::render('Home/Index');
+Route::controller(GroupController::class)->group(function () {
+    Route::get("/groups", "index");
 });
 
-Route::get('/group',function(){
-    return Inertia::render('Group/Index');
+Route::controller(TaskController::class)->group(function () {
+    Route::get("/tasks", "index");
+    Route::get("/tasks/{task}", "show");
 });
 
-Route::get('/task',function(){
-    return Inertia::render('Group/Task');
+Route::controller(ItemController::class)->group(function () {
+    Route::get("/items", "index");
+    Route::get("/items/{item}", "show");
 });
 
-Route::get('/items',function(){
-    return Inertia::render('Group/Items');
+Route::controller(HomeController::class)->group(function () {
+    Route::get("/", "index");
 });
 
-require __DIR__.'/auth.php';
+// Route::get('/test', function () {
+//     return Inertia::render('Home/Index');
+// });
+
+require __DIR__ . '/auth.php';

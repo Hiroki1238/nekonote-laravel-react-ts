@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
+            $table->date('deadline');
+            $table->string('description');
+            $table->integer('quantity');
+            $table->foreignId('user_id')->constrained('users');
             $table->foreignId('item_id')->constrained('items');
             $table->timestamps();
         });
