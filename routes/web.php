@@ -6,6 +6,7 @@ use Inertia\Inertia;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\GroupController;
+use App\Http\Controllers\TaskController;
 
 /*
 |--------------------------------------------------------------------------

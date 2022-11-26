@@ -16,7 +16,7 @@ export default function Guest({ children }: Props) {
                     </Link>
                 </div>
                 <div className="w-40 text-center font-black text-blue-400 ml-5 mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg border-blue-400 border-2">
-                    <Link href="/test">ホーム</Link>
+                    <Link href="/">ホーム</Link>
                 </div>
 
                 <div className="w-40  text-center mt-6 px-6 py-4 font-black text-green-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-green-400 border-2">
@@ -24,11 +24,11 @@ export default function Guest({ children }: Props) {
                 </div>
 
                 <div className="w-40  text-center mt-6 px-6 py-4 font-black text-yellow-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-yellow-400 border-2">
-                    <Link href="/task">タスク一覧</Link>
+                    <Link href="/tasks/1">タスク一覧</Link>
                 </div>
 
                 <div className="w-40 text-center mt-6 px-6 py-4 font-black  text-purple-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-purple-400 border-2">
-                    <Link href="/items">商品一覧</Link>
+                    <Link href="/items/1">商品一覧</Link>
                 </div>
 
                 <div className="w-40 text-center mt-6 px-6 py-4 font-black text-red-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-red-400 border-2">
