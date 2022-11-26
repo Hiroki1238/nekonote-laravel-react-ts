@@ -38,7 +38,17 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::controller(GroupController::class)->group(function () {
-    Route::get("/group", "index");
+    Route::get("/groups", "index");
+});
+
+Route::controller(TaskController::class)->group(function () {
+    Route::get("/tasks", "index");
+    Route::get("/tasks/{task}", "show");
+});
+
+Route::controller(ItemController::class)->group(function () {
+    Route::get("/items", "index");
+    Route::get("/items/{item}", "show");
 });
 
 Route::controller(HomeController::class)->group(function () {

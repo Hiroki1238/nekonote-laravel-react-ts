@@ -11,4 +11,5 @@ class GroupController extends Controller
     {
         return Inertia::render('Group/Index'); 
     }
+    
 }
