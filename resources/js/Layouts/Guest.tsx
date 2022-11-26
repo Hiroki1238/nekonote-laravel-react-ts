@@ -37,7 +37,7 @@ export default function Guest({ children }: Props) {
             </div>
             <main className="flex max-w-full h-full justify-around">
                 <div className="w-1/6">
-                    
+                    <p><Link href=""></Link></p>
                     </div>
 
             </main>

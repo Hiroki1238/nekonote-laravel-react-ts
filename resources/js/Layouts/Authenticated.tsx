@@ -20,22 +20,32 @@ export default function Authenticated({ auth, header, children }: Props) {
             <nav className="bg-white border-b border-gray-100">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between h-16">
-                        <div className="flex">
-                            <div className="shrink-0 flex items-center">
-                                <Link href="/">
-                                    <ApplicationLogo className="block h-9 w-auto text-gray-500" />
-                                </Link>
-                            </div>
+                    <div className="flex sm:justify-center items-center pt-6 sm:pt-0 bg-white">
+                <div>
+                    <Link href="/">
+                        <ApplicationLogo className="w-28 h-auto pt-3 mr-5 fill-current text-gray-500" />
+                    </Link>
+                </div>
+                <div className="w-40 text-center font-black text-blue-400 ml-5 mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg border-blue-400 border-2">
+                    <Link href="/test">ホーム</Link>
+                </div>
 
-                            <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <NavLink
-                                    href={route("dashboard")}
-                                    active={route().current("dashboard")}
-                                >
-                                    Dashboard
-                                </NavLink>
-                            </div>
-                        </div>
+                <div className="w-40  text-center mt-6 px-6 py-4 font-black text-green-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-green-400 border-2">
+                    <Link href="/mypage">マイページ</Link>
+                </div>
+
+                <div className="w-40  text-center mt-6 px-6 py-4 font-black text-yellow-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-yellow-400 border-2">
+                    <Link href="/task">タスク一覧</Link>
+                </div>
+
+                <div className="w-40 text-center mt-6 px-6 py-4 font-black  text-purple-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-purple-400 border-2">
+                    <Link href="/items">商品一覧</Link>
+                </div>
+
+                <div className="w-40 text-center mt-6 px-6 py-4 font-black text-red-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-red-400 border-2">
+                    <Link href="/login">ログイン</Link>
+                </div>
+            </div>
 
                         <div className="hidden sm:flex sm:items-center sm:ml-6">
                             <div className="ml-3 relative">
