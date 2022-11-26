@@ -16,167 +16,96 @@ export default function Authenticated({ auth, header, children }: Props) {
         useState(false);
 
     return (
-        <div className="min-h-screen bg-gray-100">
-            <nav className="bg-white border-b border-gray-100">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex justify-between h-16">
-                    <div className="flex sm:justify-center items-center pt-6 sm:pt-0 bg-white">
+        <div>
+        <div className="flex sm:justify-center items-center pt-6 sm:pt-0 bg-white">
+            <div>
+                <Link href="/">
+                    <ApplicationLogo className="w-28 h-auto pt-3 mr-5 fill-current text-gray-500" />
+                </Link>
+            </div>
+            <div className="w-40 text-center font-black text-blue-400 ml-5 mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg border-blue-400 border-2">
+                <Link href="/">ホーム</Link>
+            </div>
+
+            <div className="w-40  text-center mt-6 px-6 py-4 font-black text-green-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-green-400 border-2">
+                <Link href="/mypage">マイページ</Link>
+            </div>
+
+            <div className="w-40  text-center mt-6 px-6 py-4 font-black text-yellow-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-yellow-400 border-2">
+                <Link href="/tasks/1">タスク一覧</Link>
+            </div>
+
+            <div className="w-40 text-center mt-6 px-6 py-4 font-black  text-purple-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-purple-400 border-2">
+                <Link href="/items/1">商品一覧</Link>
+            </div>
+
+            <div className="w-40 text-center mt-6 px-6 py-4 font-black text-red-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-red-400 border-2">
+                <Link href="/login">ログイン</Link>
+            </div>
+        </div>
+        <main className="flex max-w-full h-full justify-around">
+            <div className="w-1/6">
+                <p><Link href=""></Link></p>
+                </div>
+
+        </main>
+
+        <main>{children}</main>
+        <footer className="bg-gray-200 mt-10">
+            <div className="flex">
+                <div className="pt-9 mr-auto">
+                    <ApplicationLogo className="h-16 ml-16" />
+                </div>
+
                 <div>
-                    <Link href="/">
-                        <ApplicationLogo className="w-28 h-auto pt-3 mr-5 fill-current text-gray-500" />
-                    </Link>
-                </div>
-                <div className="w-40 text-center font-black text-blue-400 ml-5 mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg border-blue-400 border-2">
-                    <Link href="/test">ホーム</Link>
-                </div>
-
-                <div className="w-40  text-center mt-6 px-6 py-4 font-black text-green-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-green-400 border-2">
-                    <Link href="/mypage">マイページ</Link>
+                    <p className="pt-11 pr-7">
+                        <Link
+                            href="/"
+                            className="no-underline text-3xl"
+                        >
+                            トップ
+                        </Link>
+                    </p>
                 </div>
 
-                <div className="w-40  text-center mt-6 px-6 py-4 font-black text-yellow-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-yellow-400 border-2">
-                    <Link href="/task">タスク一覧</Link>
+                <div>
+                    <p className="pt-11 pr-7">
+                        <Link
+                            href="/description"
+                            className="no-underline text-3xl"
+                        >
+                            仮タイトル
+                        </Link>
+                    </p>
                 </div>
 
-                <div className="w-40 text-center mt-6 px-6 py-4 font-black  text-purple-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-purple-400 border-2">
-                    <Link href="/items">商品一覧</Link>
+                <div>
+                    <p className="pt-11 pr-7">
+                        <Link
+                            href=""
+                            className="no-underline text-3xl"
+                        >
+                            仮タイトル
+                        </Link>
+                    </p>
                 </div>
 
-                <div className="w-40 text-center mt-6 px-6 py-4 font-black text-red-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-red-400 border-2">
-                    <Link href="/login">ログイン</Link>
+                <div>
+                    <p className="pt-11 pr-24">
+                        <Link
+                            href=""
+                            className="no-underline text-3xl"
+                        >
+                            仮タイトル
+                        </Link>
+                    </p>
                 </div>
             </div>
 
-                        <div className="hidden sm:flex sm:items-center sm:ml-6">
-                            <div className="ml-3 relative">
-                                <Dropdown>
-                                    <Dropdown.Trigger>
-                                        <span className="inline-flex rounded-md">
-                                            <button
-                                                type="button"
-                                                className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150"
-                                            >
-                                                {auth.user.name}
-
-                                                <svg
-                                                    className="ml-2 -mr-0.5 h-4 w-4"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 20 20"
-                                                    fill="currentColor"
-                                                >
-                                                    <path
-                                                        fillRule="evenodd"
-                                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                                        clipRule="evenodd"
-                                                    />
-                                                </svg>
-                                            </button>
-                                        </span>
-                                    </Dropdown.Trigger>
-
-                                    <Dropdown.Content>
-                                        <Dropdown.Link
-                                            href={route("logout")}
-                                            method="post"
-                                            as="button"
-                                        >
-                                            ログアウト
-                                        </Dropdown.Link>
-                                    </Dropdown.Content>
-                                </Dropdown>
-                            </div>
-                        </div>
-
-                        <div className="-mr-2 flex items-center sm:hidden">
-                            <button
-                                onClick={() =>
-                                    setShowingNavigationDropdown(
-                                        (previousState) => !previousState
-                                    )
-                                }
-                                className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
-                            >
-                                <svg
-                                    className="h-6 w-6"
-                                    stroke="currentColor"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path
-                                        className={
-                                            !showingNavigationDropdown
-                                                ? "inline-flex"
-                                                : "hidden"
-                                        }
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M4 6h16M4 12h16M4 18h16"
-                                    />
-                                    <path
-                                        className={
-                                            showingNavigationDropdown
-                                                ? "inline-flex"
-                                                : "hidden"
-                                        }
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M6 18L18 6M6 6l12 12"
-                                    />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    className={
-                        (showingNavigationDropdown ? "block" : "hidden") +
-                        " sm:hidden"
-                    }
-                >
-                    <div className="pt-2 pb-3 space-y-1">
-                        <ResponsiveNavLink
-                            href={route("dashboard")}
-                            active={route().current("dashboard")}
-                        >
-                            Dashboard
-                        </ResponsiveNavLink>
-                    </div>
-
-                    <div className="pt-4 pb-1 border-t border-gray-200">
-                        <div className="px-4">
-                            <div className="font-medium text-base text-gray-800">
-                                {auth.user.name}
-                            </div>
-                            <div className="font-medium text-sm text-gray-500">
-                                {auth.user.email}
-                            </div>
-                        </div>
-
-                        <div className="mt-3 space-y-1">
-                            <ResponsiveNavLink
-                                method="post"
-                                href={route("logout")}
-                                as="button"
-                            >
-                                ログアウト
-                            </ResponsiveNavLink>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            {header && (
-                <header className="bg-white shadow">
-                    <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {header}
-                    </div>
-                </header>
-            )}
-
-            <main>{children}</main>
-        </div>
+            <p className="text-center text-2xl mt-5 py-12">
+                Copyright © 2022 NEKONOTE CORPORATION. All Rights Reserved.
+            </p>
+        </footer>
+    </div>
     );
 }
