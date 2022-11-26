@@ -35,8 +35,16 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/test', function () {
-    return Inertia::render('Home/Index');
+Route::controller(GroupController::class)->group(function () {
+    Route::get("/group", "Group/Index");
 });
 
-require __DIR__.'/auth.php';
+Route::controller(HomeController::class)->group(function () {
+    Route::get("/", "Home/Index");
+});
+
+// Route::get('/test', function () {
+//     return Inertia::render('Home/Index');
+// });
+
+require __DIR__ . '/auth.php';
