@@ -22,7 +22,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('image_path')->nullable();
-            $table->foreignId('vehicle_id')->nullable()->constrained('vehicle');
+            $table->foreignId('vehicle_id')->nullable()->constrained('vehicles');
             $table->rememberToken();
             $table->timestamps();
         });
