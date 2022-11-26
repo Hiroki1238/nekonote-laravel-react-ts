@@ -1,7 +1,6 @@
 import React from 'react';
 import Authenticated from "@/Layouts/Authenticated";
 import Guest from "@/Layouts/Guest";
-import { createRoot } from 'react-dom/client';
 
 
 
