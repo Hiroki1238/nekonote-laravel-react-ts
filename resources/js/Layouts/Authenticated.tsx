@@ -42,6 +42,7 @@ export default function Authenticated({ auth, header, children }: Props) {
             <div className="w-40 text-center mt-6 px-6 py-4 font-black text-red-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-red-400 border-2">
                 <Link href="/login">ログイン</Link>
             </div>
+            
         </div>
         <main className="flex max-w-full h-full justify-around">
             <div className="w-1/6">
