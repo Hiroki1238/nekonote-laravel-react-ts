@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('groups', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('name')->unique();
             $table->string('description');
-            $table->string('invitation_code')->nullable();
+            $table->string('invitation_code')->unique()->nullable();
             $table->string('image_path');
             $table->timestamps();
         });
