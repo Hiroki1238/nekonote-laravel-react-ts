@@ -17,7 +17,7 @@ export default function Authenticated({ auth, header, children }: Props) {
 
     return (
         <div>
-        <div className="flex sm:justify-center items-center pt-6 sm:pt-0 bg-white">
+        <div className="flex sm:justify-center items-center pt-6 sm:pt-0 bg-white border-b-2 border-gray-400">
             <div>
                 <Link href="/">
                     <ApplicationLogo className="w-28 h-auto pt-3 mr-5 fill-current text-gray-500" />
