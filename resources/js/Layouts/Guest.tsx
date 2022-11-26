@@ -43,6 +43,61 @@ export default function Guest({ children }: Props) {
             </main>
 
             <main>{children}</main>
+            <footer className="bg-gray-200 mt-10">
+                <div className="flex">
+                    <div className="pt-9 mr-auto">
+                        <ApplicationLogo className="h-16 ml-16" />
+                    </div>
+
+                    <div>
+                        <p className="pt-11 pr-7">
+                            <Link
+                                href="/"
+                                className="no-underline text-3xl"
+                            >
+                                トップ
+                            </Link>
+                        </p>
+                    </div>
+
+                    <div>
+                        <p className="pt-11 pr-7">
+                            <Link
+                                href="/description"
+                                className="no-underline text-3xl"
+                            >
+                                仮タイトル
+                            </Link>
+                        </p>
+                    </div>
+
+                    <div>
+                        <p className="pt-11 pr-7">
+                            <Link
+                                href=""
+                                className="no-underline text-3xl"
+                            >
+                                仮タイトル
+                            </Link>
+                        </p>
+                    </div>
+
+                    <div>
+                        <p className="pt-11 pr-24">
+                            <Link
+                                href=""
+                                className="no-underline text-3xl"
+                            >
+                                仮タイトル
+                            </Link>
+                        </p>
+                    </div>
+                </div>
+
+                <p className="text-center text-2xl mt-5 py-12">
+                    Copyright © 2022 NEKONOTE CORPORATION. All Rights Reserved.
+                </p>
+            </footer>
         </div>
     );
 }
