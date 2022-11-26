@@ -1,10 +1,9 @@
-import React, { Children } from "react";
+import React, { Children } from 'react';
 import Authenticated from "@/Layouts/Authenticated";
 
 interface Props {
     children: React.ReactNode;
 }
-
 interface IndexProps {
     auth: any;
     users: any;
