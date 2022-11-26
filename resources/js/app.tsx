@@ -17,7 +17,6 @@ function AppWithCallbackAfterRender() {
   const root = createRoot(container!);
   root.render(<AppWithCallbackAfterRender />);
 
-
 const appName =
     window.document.getElementsByTagName("title")[0]?.innerText || "Laravel";
 
