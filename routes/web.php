@@ -39,4 +39,16 @@ Route::get('/test', function () {
     return Inertia::render('Home/Index');
 });
 
+Route::get('/group',function(){
+    return Inertia::render('Group/Index');
+});
+
+Route::get('/task',function(){
+    return Inertia::render('Group/Task');
+});
+
+Route::get('/items',function(){
+    return Inertia::render('Group/Items');
+});
+
 require __DIR__.'/auth.php';

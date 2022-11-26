@@ -21,7 +21,7 @@ const Index: React.FC<IndexProps> = (props) => {
             <Authenticated auth={auth}>
                 <div className="flex">
                 <div>
-                    {users.image_path !== null ? (
+                    {/* {users.image_path !== null ? (
                         <div className="w-1/7">
                             <img
                                 className="h-12 w-12 my-0 ml-0 rounded-full aspect-square object-cover border-2 border-gray-300"
@@ -35,10 +35,14 @@ const Index: React.FC<IndexProps> = (props) => {
                                 src="https://nekoillust.com/wp-content/uploads/2018/10/16a6c0fecf7c1b558b68e58186e2f292.jpg"
                             />
                         </div>
-                    )}
+                    )} */}
+                     <img
+                                className="h-12 w-12 my-0 ml-0 rounded-full aspect-square object-cover border-2 border-gray-300"
+                                src="https://nekoillust.com/wp-content/uploads/2018/10/16a6c0fecf7c1b558b68e58186e2f292.jpg"
+                            />
 </div>
 <div>
-    {users.map((user:any) => (
+    {/* {users.map((user:any) => (
   user.image_path !== null ? (
     <div className="w-1/7">
         <img
@@ -61,7 +65,8 @@ const Index: React.FC<IndexProps> = (props) => {
     )
 
     )
-    }
+    } */}
+    
 </div>
 
 </div>
