@@ -27,9 +27,16 @@ console.log(props);
                                 className="text-link-blue text-2xl hover:text-link-blue2"
                                 href={`/tasks/${task.id}`}
                             >
+                              <div className="flex">
+                               <div>
+                                <img className="h-24 w-auto mr-6" src={task.item.image_path}/>
+                                </div>
+                                <div>
                                 <p>商品名：{task.item.name}</p>
                                 <p>依頼者：{task.user.user_name}</p>
                                 <p>説明：{task.description}</p>
+                                </div>
+                                </div>
                             </Link>
                         </div>
                 </div>

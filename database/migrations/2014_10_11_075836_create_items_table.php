@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('description');
             $table->string('stock');
-            $table->string('url');
+            $table->string('url')->nullable();
             $table->string('image_path')->nullable();
             $table->foreignId('group_id')->constrained('groups');
             $table->timestamps();
