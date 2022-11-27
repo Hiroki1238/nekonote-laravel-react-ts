@@ -1,66 +1,123 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# ネコノテ
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<img width="91" alt="raion_logo" src="https://user-images.githubusercontent.com/105682555/201507595-326dd310-0420-4194-a3fa-f8e6b183b3f0.png">
+いつも使ってる歯磨き粉がもう無くなる...
+ストックもない...
+そんな悲しみから沢山の人を救うためのアプリケーションです。
 
-## About Laravel
+## 本アプリの概要
+本アプリは主に以下の二点を目的としたアプリケーションです。
+1. 買い出しを頼む作業をサポートします。家族やサークル、職場などでの使用を想定しています。
+2. グループを自由に作ることができ、グループのメンバーが使う商品を商品一覧画面で表示します。自由に登録できるので、商品のラインナップは各グループによって異なります。
+3. 残り在庫が少なくなった商品があったら通知することができます。（未完成）
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+#### デプロイ先
+調整中です。
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+#### テスト用アカウント
+メールアドレス：neko@gmail.com  
+パスワード：nekoneko
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+#### 注意
+本アプリは制作途中です。
 
-## Learning Laravel
+#### 制作背景
+文章作成中
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 実装済み機能
+- 会員登録機能
+- 商品の一覧表示機能
+- タスク表示機能
+- 画像投稿機能（S3）
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+#### 今後の展望
+- ソーシャルログイン(Google,Twitterなど)
+- タスク等をLINEに通知できるようにする
+- 全体的なデザインの修正
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+---
 
-### Premium Partners
+## 使用技術
+#### フロントエンド
+- React18
+- TypeScript
+- HTML
+- CSS(Tailwind)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+#### バックエンド
+- Laravel9 (PHP)
 
-## Contributing
+#### インフラ
+- Docker
+- MySQL
+- Amazon S3
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+#### その他
+- Visual Studio Code
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 構成図
+※修正中です。
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## データベース設計
 
-## License
+#### 各テーブルについて
+|テーブル名|説明|
+| :---: | :---: |
+|  users  |  ユーザー情報  |
+|  vehicles  |  ユーザーの移動手段の情報  |
+|  tasks  |  タスクの情報  |
+|  task_user  |  タスクとその引受人の情報  |
+|  items  |  ユーザーが登録した商品情報  |
+|  likes (item_user)  |  商品に対するお気に入り情報  |
+|  groups  |  グループの情報  |
+|  group_user  |  各グループに所属するユーザーの情報  |
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<img width="1000" alt="ER-diagram" src="https://user-images.githubusercontent.com/105682555/204138769-97df4f39-1eda-4a68-ac86-79abc53efb27.png">
+
+---
+
+## 環境の立ち上げ方
+1. DockerDesktopのインストール
+2. このリポジトリをクローン
+3. 対象箇所で下記を実行
+```
+//nekonote-laravel-react-tsで下記を実行
+
+＄ sail up -d
+```
+
+4. マイグレーション
+```
+//nekonote-laravel-react-tsで下記を実行
+$ sail artisan migrate
+$ sail artisan db:seed
+```
+
+5. composer、node.jsのインストール
+```
+$composer install
+$npm install
+```
+
+6.ローカルでアプリケーションを起動
+```
+$ sail up -d
+$ npm run dev
+// localhostにアクセスするとプレビューが確認できる
+```
+
+#### dockerの停止
+```
+// dockerコンテナの停止
+$ sail stop
+
+// dockerコンテナの削除
+$ sail down
+```
