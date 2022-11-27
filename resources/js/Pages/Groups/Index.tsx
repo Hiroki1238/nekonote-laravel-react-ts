@@ -43,7 +43,7 @@ const Index: React.FC<IndexProps> = (props) => {
                     
 <div>
     <div>依頼している商品</div>
-    <div> aa{tasks.item.name}</div>
+    <div></div>
     
 </div>
                         

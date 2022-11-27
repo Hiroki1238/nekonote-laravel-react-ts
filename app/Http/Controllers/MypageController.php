@@ -13,6 +13,6 @@ class MypageController extends Controller
 {
     public function index(User $user)
     {
-        return Inertia::render("Mypage/Index", ['user' => $user]);
+        return Inertia::render("Mypage/Index", ['user' => $user->find($user->id)]);
     }
 }

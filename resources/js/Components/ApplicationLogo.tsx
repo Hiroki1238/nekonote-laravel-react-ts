@@ -6,6 +6,6 @@ interface Props {
 
 export default function ApplicationLogo({ className }: Props) {
     return (
-     <img className={className} src="logo/logo.png"/>
+     <img className={className} src="/logo/logo.png"/>
     );
 }
