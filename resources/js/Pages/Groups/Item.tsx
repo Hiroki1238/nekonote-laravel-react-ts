@@ -5,11 +5,11 @@ import Guest from "@/Layouts/Guest";
 
 interface IndexProps {
   auth: any;
-  tasks: any;
+  items: any;
 }
  
-const Task:React.FC<IndexProps> = (props) => {
-  const { auth,tasks } = props;
+const Item:React.FC<IndexProps> = (props) => {
+  const { auth,items } = props;
 // const Index :any = (props : any) => {
 // const {user,auth} = props;
 console.log(props);
@@ -18,23 +18,20 @@ console.log(props);
     <div>
  {  auth.user != null ? (
 <Authenticated auth={auth} >
-<div className="mb-4 font-kosugimaru text-gray-700">
-            {tasks.map((task:any) => (
-                <div key={task.id}>
-                        <div className="mx-10 mt-10 px-3 py-4 border-2 border-gray-300">
+<div className="mb-4 font-kosugimaru text-gray-700 flex justify-center">
+            {items.map((item:any) => (
+                <div key={item.id}>
+                        <div className="mt-10 px-3 py-4 border-2 border-gray-300 w-80 h-auto">
                             <Link
                                 className="text-link-blue text-2xl hover:text-link-blue2"
-                                href={`/tasks/${task.id}`}
+                                href={`/items/${item.id}`}
                             >
-                              <div className="flex">
                                <div>
-                                <img className="h-24 w-auto mr-6" src={task.item.image_path}/>
+                                <img className="h-auto w-auto mr-6" src={item.image_path}/>
                                 </div>
                                 <div>
-                                <p className="mb-1">商品名：{task.item.name}</p>
-                                <p className="mb-1">依頼者：{task.user.user_name}</p>
-                                <p>説明：{task.description}</p>
-                                </div>
+                                <p className="mb-4 text-3xl text-center">{item.name}</p>
+                                <p>{item.description}</p>
                                 </div>
                             </Link>
                         </div>
@@ -54,4 +51,4 @@ console.log(props);
  );
 }
 
-export default Task
+export default Item
