@@ -1,6 +1,6 @@
 # ネコノテ
 
-<img width="91" alt="raion_logo" src="https://user-images.githubusercontent.com/105682555/201507595-326dd310-0420-4194-a3fa-f8e6b183b3f0.png">
+<img width="91" alt="nekonote_logo" src="">
 いつも使ってる歯磨き粉がもう無くなる...
 ストックもない...
 そんな悲しみから沢山の人を救うためのアプリケーションです。
