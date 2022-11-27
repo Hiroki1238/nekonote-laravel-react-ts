@@ -19,8 +19,8 @@ class ItemSeeder extends Seeder
             'name' => 'アポロ',
             'description' => '普通のアポロの方です。',
             'stock' => '2',
-            'url' => 'https://products.suntory.co.jp/d/4901777216884/',
-            'image_path' => null,
+            'url' => null,
+            'image_path' => 'https://www.meiji.co.jp/products/chocolate/assets/img/05079.jpg',
             'group_id' => 1
         ]);
 
@@ -28,17 +28,17 @@ class ItemSeeder extends Seeder
             'name' => 'SUNTORY 天然水 2L',
             'description' => 'この水が売っていたら必ずこれを買ってください。',
             'stock' => '6',
-            'url' => 'https://products.suntory.co.jp/d/4901777216884/',
-            'image_path' => null,
+            'url' => null,
+            'image_path' => 'https://m.media-amazon.com/images/I/71x5x6kYruL._AC_SX679_PIbundle-9,TopRight,0,0_SH20_.jpg',
             'group_id' => 1
         ]);
 
         DB::table('items')->insert([
-            'name' => 'きなこ棒',
-            'description' => '配布用です。',
+            'name' => 'ミヨシ 無添加せっけん 泡のハンドソープ',
+            'description' => '無くなる前に買ってください！',
             'stock' => '7',
-            'url' => 'https://products.suntory.co.jp/d/4901777216884/',
-            'image_path' => null,
+            'url' => null,
+            'image_path' => 'https://cdn.shopify.com/s/files/1/0057/4616/3815/products/hand-b-a_533x.png?v=1622706881',
             'group_id' => 1
         ]);
     }

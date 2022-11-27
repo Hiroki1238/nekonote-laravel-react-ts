@@ -17,7 +17,7 @@ class TaskSeeder extends Seeder
     {
         DB::table('tasks')->insert([
             'deadline' => now(),
-            'description' => '急いなので、行ける人はすぐ買いに行ってください！',
+            'description' => '急ぎなので、行ける人はすぐ買いに行ってください！',
             'quantity' => 4,
             'user_id' => 1,
             'item_id' => 1,
