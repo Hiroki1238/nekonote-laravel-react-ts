@@ -6,12 +6,14 @@ interface Props {
 }
 interface IndexProps {
     auth: any;
-    users: any;
+    user: any;
     group: any;
+    tasks: any;
+    item:any;
 }
 
 const Index: React.FC<IndexProps> = (props) => {
-    const { auth, users, group } = props;
+    const { auth, user, group ,tasks,item } = props;
     // const Index :any = (props : any) => {
     // const {user,auth} = props;
 
@@ -20,29 +22,29 @@ const Index: React.FC<IndexProps> = (props) => {
             <Authenticated auth={auth}>
                 <div className="flex">
                     <div>
-                        {users.image_path !== null ? (
+                        {user.image_path !== null ? (
                         <div className="w-1/7">
                             <img
-                                className="h-12 w-12 my-0 ml-0 rounded-full aspect-square object-cover border-2 border-gray-300"
+                                className="h-auto w-40 my-5 ml-0 rounded-full aspect-square object-cover border-2 border-gray-300"
                                 src={group.image_path}
                             />
                         </div>
                     ) : (
                         <div className="w-1/7">
                             <img
-                                className="h-12 w-12 my-0 ml-0 rounded-full aspect-square object-cover border-2 border-gray-300"
+                                className="h-auto w-40 my-5  rounded-full aspect-square object-cover border-2 border-gray-300"
                                 src="https://nekoillust.com/wp-content/uploads/2018/10/16a6c0fecf7c1b558b68e58186e2f292.jpg"
                             />
                         </div>
                     )}
 
-<div>{users.user_name}</div>
+<div className="bg-white border-2 border-blue-400 text-blue-400 text-center">{user.user_name}</div>
 
-                    <div>
-                        依頼されている商品
-                    </div>
+                    
 <div>
-    依頼している商品
+    <div>依頼している商品</div>
+    <div> aa{tasks.item.name}</div>
+    
 </div>
                         
                     </div>
