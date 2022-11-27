@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('task_user', function (Blueprint $table) {
             $table->foreignId('task_id')->constrained('tasks');
             $table->foreignId('user_id')->constrained('users');
+            //$table->foreignId('requestor_id')->constrained('users');
             $table->primary(['task_id', 'user_id']);
             $table->integer('status');
             $table->timestamps();

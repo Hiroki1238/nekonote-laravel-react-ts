@@ -14,6 +14,11 @@ class Task extends Model
       return $this->belongsToMany(User::class);
     }
 
+    public function user() //依頼者
+    {
+        return $this->belongsTo(User::class);
+    }
+
     public function item()
     {
         return $this->belongsTo(Item::class);

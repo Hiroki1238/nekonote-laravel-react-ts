@@ -13,6 +13,7 @@ const Task:React.FC<IndexProps> = (props) => {
   const { auth,tasks } = props;
 // const Index :any = (props : any) => {
 // const {user,auth} = props;
+console.log(props);
  
   return (
     <div>
@@ -27,7 +28,8 @@ const Task:React.FC<IndexProps> = (props) => {
                                 href={`/tasks/${task.id}`}
                             >
                                 <p>商品名：{task.item.name}</p>
-                                <p>依頼者：{task.user_id}</p>
+                                <p>依頼者：{task.user.user_name}</p>
+                                <p>説明：{task.description}</p>
                             </Link>
                         </div>
                 </div>

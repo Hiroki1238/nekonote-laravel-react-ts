@@ -52,9 +52,14 @@ class User extends Authenticatable
         return $this->belongsTo(Vehicle::class);
     }
 
-    public function myTasks()   //中間テーブル
+    public function myTasks()   //中間テーブル //引き受けたタスク
     {
       return $this->belongsToMany(Task::class);
+    }
+
+    public function tasks()
+    {
+      return $this->hasMany(Task::class);
     }
 
     public function likeItems()   //中間テーブル
