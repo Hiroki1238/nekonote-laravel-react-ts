@@ -38,5 +38,21 @@ class TaskSeeder extends Seeder
             'user_id' => 2,
             'item_id' => 3,
         ]);
+
+        DB::table('tasks')->insert([
+            'deadline' => now(),
+            'description' => '急いではいません。',
+            'quantity' => 3,
+            'user_id' => 2,
+            'item_id' => 4,
+        ]);
+
+        DB::table('tasks')->insert([
+            'deadline' => now(),
+            'description' => '急いではいません。',
+            'quantity' => 2,
+            'user_id' => 3,
+            'item_id' => 5,
+        ]);
     }
 }
