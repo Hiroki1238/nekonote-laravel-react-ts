@@ -23,11 +23,17 @@ interface IndexProps {
       <div>
   <Authenticated auth={auth} >
     <div className="text-center ">
-  <div>
-      <Link href={`/groups/${auth.user.id}`}>所属しているグループ</Link>
-  </div>
-<div>{user}</div>
-
+<div className="border-2 mt-3 border-blue-400">名前　猫山　イヌ男</div>
+<div className="border-2 mt-3 border-green-400"> アカウント名　ゴリラ</div>
+<div className="border-2 mt-3 border-yellow-400"><Link href={`/groups/${auth.user.id}`}>所属しているグループ</Link>
+<p >家族</p>
+<p>バイト</p>
+<p>会社</p>
+<p>ネコ軍団</p>
+</div>
+<div className=" mt-3 mb-5">
+<Link href="" className="border-2 border-purple-400 text-purple-400">編集</Link>
+</div>
   </div>
   </Authenticated>
    
