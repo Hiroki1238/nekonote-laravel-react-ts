@@ -9,7 +9,7 @@ class GroupController extends Controller
 {
     public function index()
     {
-        return Inertia::render('Group/Index'); 
+        return Inertia::render('Groups/Index'); 
     }
     
 }
