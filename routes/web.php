@@ -7,6 +7,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\GroupController;
 use App\Http\Controllers\TaskController;
+use App\Http\Controllers\MypageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,6 +57,9 @@ Route::controller(HomeController::class)->group(function () {
     Route::get("/", "index");
 });
 
+Route::controller(MypageController::class)->group(function () {
+    Route::get("/mypage", "index");
+});
 // Route::get('/test', function () {
 //     return Inertia::render('Home/Index');
 // });
