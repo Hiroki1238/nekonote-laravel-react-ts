@@ -23,7 +23,7 @@ interface IndexProps {
   <Authenticated auth={auth} >
     <div>
   <div>
-      <Link href="/groups">所属しているグループ</Link>
+      <Link href={`/groups/${auth.user.id}`}>所属しているグループ</Link>
   </div>
 
 
