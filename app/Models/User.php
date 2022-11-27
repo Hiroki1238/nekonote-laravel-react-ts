@@ -41,4 +41,24 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function myGroups()   //中間テーブル
+    {
+      return $this->belongsToMany(Group::class);
+    }
+
+    public function vehicle()
+    {
+        return $this->belongsTo(Vehicle::class);
+    }
+
+    public function myTasks()   //中間テーブル
+    {
+      return $this->belongsToMany(Task::class);
+    }
+
+    public function likeItems()   //中間テーブル
+    {
+      return $this->belongsToMany(Venue::class, 'likes', 'item_id', 'user_id');
+    }
 }

@@ -10,7 +10,7 @@ class TaskController extends Controller
 {
     public function index(Task $task)
     {
-        $tasks = $task->orderBy('created_at', 'ASC')->get();
+        $tasks = Task::with('item','user')->get();
         return Inertia::render('Groups/Task',['tasks' => $tasks]); 
     }
 }
