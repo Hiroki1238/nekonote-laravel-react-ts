@@ -17,13 +17,43 @@ class UserSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
+            'last_name' => 'ねこ',
+            'first_name' => 'ねこぴ',
+            'user_name' => 'nekopi',
+            'email' => 'neko@gmail.com',
+            'password' => Hash::make('nekoneko'),
+            'image_path' => null,
+            'vehicle_id' => 1,
+        ]);
+
+        DB::table('users')->insert([
             'last_name' => '猫山',
             'first_name' => 'ネコ',
             'user_name' => 'いぬ',
             'email' => 'aaa@gmail.com',
             'password' => Hash::make('aaiiuueeoo'),
             'image_path' => null,
-            'vehicle_id' => null,
+            'vehicle_id' => 2,
+        ]);
+
+        DB::table('users')->insert([
+            'last_name' => '犬川',
+            'first_name' => 'イヌ',
+            'user_name' => 'ねこ',
+            'email' => 'bbb@gmail.com',
+            'password' => Hash::make('abcdefgh'),
+            'image_path' => null,
+            'vehicle_id' => 3,
+        ]);
+
+        DB::table('users')->insert([
+            'last_name' => '上下',
+            'first_name' => '左右',
+            'user_name' => 'center',
+            'email' => 'ccc@gmail.com',
+            'password' => Hash::make('abcd1234'),
+            'image_path' => null,
+            'vehicle_id' => 4,
         ]);
     }
 }

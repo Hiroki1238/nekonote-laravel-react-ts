@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name')->unique();
             $table->string('description');
             $table->string('invitation_code')->unique()->nullable();
-            $table->string('image_path');
+            $table->string('image_path')->nullable();
             $table->timestamps();
         });
     }

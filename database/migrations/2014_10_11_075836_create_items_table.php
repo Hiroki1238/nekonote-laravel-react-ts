@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('description');
             $table->string('stock');
             $table->string('url');
-            $table->string('image_path');
+            $table->string('image_path')->nullable();
             $table->foreignId('group_id')->constrained('groups');
             $table->timestamps();
         });
