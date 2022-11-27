@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ItemSeeder::class);
         $this->call(LikeSeeder::class);
         $this->call(TaskSeeder::class);
+        $this->call(TaskUserSeeder::class);
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([

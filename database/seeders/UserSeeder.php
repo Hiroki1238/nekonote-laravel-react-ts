@@ -29,7 +29,7 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
             'last_name' => '猫山',
             'first_name' => 'ネコ',
-            'user_name' => 'いぬ',
+            'user_name' => 'neko',
             'email' => 'aaa@gmail.com',
             'password' => Hash::make('aaiiuueeoo'),
             'image_path' => null,
@@ -39,7 +39,7 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
             'last_name' => '犬川',
             'first_name' => 'イヌ',
-            'user_name' => 'ねこ',
+            'user_name' => 'inu',
             'email' => 'bbb@gmail.com',
             'password' => Hash::make('abcdefgh'),
             'image_path' => null,
