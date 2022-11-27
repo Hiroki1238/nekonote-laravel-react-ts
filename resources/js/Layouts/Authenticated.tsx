@@ -108,7 +108,7 @@ export default function Authenticated({ auth, header, children }: Props) {
 
                 <div className="w-5/6 pl-5 bg-white">{children}</div>
             </main>
-            <footer className="bg-white mt-10 border-t-2 border-gray-400">
+            <footer className="bg-white mt-10 border-t-2 border-gray-400 absolute bottom-0 w-full">
                 <div className="flex">
                     <div className="pt-9 mr-auto">
                         <ApplicationLogo className="h-16 ml-16" />
