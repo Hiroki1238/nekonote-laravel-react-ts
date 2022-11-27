@@ -19,7 +19,7 @@ console.log(props);
     <div>
  {  auth.user != null ? (
 <Authenticated auth={auth} >
-<div className="mb-4">
+<div className="mb-4 font-kosugimaru text-gray-700">
             {tasks.map((task:any) => (
                 <div key={task.id}>
                         <div className="mx-10 mt-10 px-3 py-4 border-2 border-gray-300">
@@ -32,8 +32,8 @@ console.log(props);
                                 <img className="h-24 w-auto mr-6" src={task.item.image_path}/>
                                 </div>
                                 <div>
-                                <p>商品名：{task.item.name}</p>
-                                <p>依頼者：{task.user.user_name}</p>
+                                <p className="mb-1">商品名：{task.item.name}</p>
+                                <p className="mb-1">依頼者：{task.user.user_name}</p>
                                 <p>説明：{task.description}</p>
                                 </div>
                                 </div>

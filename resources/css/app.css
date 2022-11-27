@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap'); /* Google fontを導入 */
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1 {
+  @apply text-2xl;
+}
+h2 {
+  @apply text-xl;
+}
+h3 {
+  @apply text-lg;
+}
+/* a {
+  @apply text-blue-600 underline;
+} */
+
+/* tailwindを使うとしかし、hタグやaタグによって文字の大きさが変わらなくなる。文字の大きさを変更するというhタグ本来の使い方をしたい場合は、resources/css/app.cssに上記のような設定を追記する。 */

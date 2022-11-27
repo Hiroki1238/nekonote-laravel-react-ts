@@ -41,5 +41,24 @@ class ItemSeeder extends Seeder
             'image_path' => 'https://cdn.shopify.com/s/files/1/0057/4616/3815/products/hand-b-a_533x.png?v=1622706881',
             'group_id' => 1
         ]);
+
+        DB::table('items')->insert([
+            'name' => 'レック 激落ちくん 激落ちポイポイ',
+            'description' => '無かったら別のものでも良いです。',
+            'stock' => '4',
+            'url' => null,
+            'image_path' => 'https://dw4dgbtzbcxdk.cloudfront.net/img/goods/L/SK1941_1.jpg',
+            'group_id' => 1
+        ]);
+
+        DB::table('items')->insert([
+            'name' => 'きのこの山とたけのこの里 12袋',
+            'description' => '配布用です。',
+            'stock' => '1',
+            'url' => null,
+            'image_path' => 'https://www.meiji.co.jp/products/chocolate/assets/img/07910.jpg',
+            'group_id' => 1
+        ]);
+
     }
 }
