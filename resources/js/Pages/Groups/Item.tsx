@@ -21,17 +21,18 @@ console.log(props);
 <div className="mb-4 font-kosugimaru text-gray-700 flex justify-center">
             {items.map((item:any) => (
                 <div key={item.id}>
-                        <div className="mt-10 px-3 py-4 border-2 border-gray-300 w-80 h-auto">
+                        <div className="mt-10 px-3 py-4 border-2 border-gray-300 w-items-x h-items-y hover:border-4">
                             <Link
                                 className="text-link-blue text-2xl hover:text-link-blue2"
                                 href={`/items/${item.id}`}
                             >
-                               <div>
-                                <img className="h-auto w-auto mr-6" src={item.image_path}/>
+                               <div className="flex justify-center">
+                                <img className="h-auto w-52 aspect-square object-contain mr-6" src={item.image_path}/>
                                 </div>
                                 <div>
                                 <p className="mb-4 text-3xl text-center">{item.name}</p>
-                                <p>{item.description}</p>
+                                <p className="text-2xl">{item.description}</p>
+                                <p className="text-2xl text-red-700 mt-4">在庫：{item.stock}個</p>
                                 </div>
                             </Link>
                         </div>

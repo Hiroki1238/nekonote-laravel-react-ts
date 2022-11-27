@@ -43,7 +43,7 @@ export default function Guest({ children }: Props) {
             </main>
 
             <main>{children}</main>
-            <footer className="bg-white mt-10 border-t-2 border-gray-400">
+            <footer className="bg-white mt-10 border-t-2 border-gray-400 absolute bottom-0 w-full">
                 <div className="flex">
                     <div className="pt-9 mr-auto">
                         <ApplicationLogo className="h-16 ml-16" />
