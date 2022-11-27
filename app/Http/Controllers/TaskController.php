@@ -2,13 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Task;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
 class TaskController extends Controller
 {
-    public function index()
+    public function index(Task $task)
     {
-        return Inertia::render('Groups/Index'); 
+        $tasks = $task->orderBy('created_at', 'ASC')->get();
+        return Inertia::render('Groups/Task',['tasks' => $tasks]); 
     }
 }
+
+// return Inertia::render('Home/Index', ['prefecture_array' => $prefecture->getRegionList(), 'reviews' => $reviews]);

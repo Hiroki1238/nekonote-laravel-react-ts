@@ -1,33 +1,48 @@
 import React, { Children } from 'react';
+import { Link } from "@inertiajs/inertia-react";
 import Authenticated from "@/Layouts/Authenticated";
-
-interface Props {
-    children: React.ReactNode;
-}
-
+import Guest from "@/Layouts/Guest";
 
 interface IndexProps {
-    auth: any;
-    //user:any;
-  }
-   
-  const Index:React.FC<IndexProps> = (props) => {
-    const { auth } = props;
-  // const Index :any = (props : any) => {
-  // const {user,auth} = props;
-   
-    return (
-      <div>
-  Task
-  <Authenticated auth={auth} >
+  auth: any;
+  tasks: any;
+}
+ 
+const Task:React.FC<IndexProps> = (props) => {
+  const { auth,tasks } = props;
+// const Index :any = (props : any) => {
+// const {user,auth} = props;
+ 
+  return (
     <div>
-  <img src="https://kao-h.assetsadobe3.com/is/image/content/dam/sites/kao/www-kao-co-jp/cat-health/common/images/disease/cat_image1.jpeg?fmt=jpeg&qlt=85&wid=1680"/>
-  </div>
-  </Authenticated>
-   
-      </div>
-   );
-  }
-  
-  export default Index
+ {  auth.user != null ? (
+<Authenticated auth={auth} >
+<div className="mb-4">
+            {tasks.map((task:any) => (
+                <div key={task.id}>
+                        <div>
+                            <Link
+                                className="text-link-blue text-2xl hover:text-link-blue2"
+                                href={`/tasks/${task.id}`}
+                            >
+                                {task.item_id}
+                                リレーションでアイテム名を引っ張ってくる
+                            </Link>
+                        </div>
+                </div>
+            ))}
+        </div>
+</Authenticated>
+ ):(
+ <Guest>
+  <div>
+後でゲストはみれなくする
+</div>
+</Guest>
 
+)} 
+    </div>
+ );
+}
+
+export default Task
