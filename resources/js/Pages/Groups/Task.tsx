@@ -2,6 +2,7 @@ import React, { Children } from 'react';
 import { Link } from "@inertiajs/inertia-react";
 import Authenticated from "@/Layouts/Authenticated";
 import Guest from "@/Layouts/Guest";
+import { timingSafeEqual } from 'crypto';
 
 interface IndexProps {
   auth: any;
@@ -20,13 +21,13 @@ const Task:React.FC<IndexProps> = (props) => {
 <div className="mb-4">
             {tasks.map((task:any) => (
                 <div key={task.id}>
-                        <div>
+                        <div className="mx-10 mt-10 px-3 py-4 border-2 border-gray-300">
                             <Link
                                 className="text-link-blue text-2xl hover:text-link-blue2"
                                 href={`/tasks/${task.id}`}
                             >
-                                {task.item_id}
-                                リレーションでアイテム名を引っ張ってくる
+                                <p>商品名：{task.item.name}</p>
+                                <p>依頼者：{task.user_id}</p>
                             </Link>
                         </div>
                 </div>
