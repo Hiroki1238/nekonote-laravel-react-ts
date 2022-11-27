@@ -40,7 +40,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::controller(GroupController::class)->group(function () {
-    Route::get("/groups", "index");
+    Route::get("/groups/{user}", "index");
 });
 
 Route::controller(TaskController::class)->group(function () {
