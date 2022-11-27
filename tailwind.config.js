@@ -14,6 +14,9 @@ module.exports = {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans], zenmaru: ["Zen Maru Gothic"], kosugimaru: ["Kosugi Maru"],
             },
+            height: {
+                neko: '120px',
+              },
             width: {
                 '1/9': '0.11111111%',
                 '1/8': '12.5%',

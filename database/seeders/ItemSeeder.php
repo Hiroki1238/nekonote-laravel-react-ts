@@ -38,7 +38,7 @@ class ItemSeeder extends Seeder
             'description' => '無くなる前に買ってください！',
             'stock' => '7',
             'url' => null,
-            'image_path' => 'https://cdn.shopify.com/s/files/1/0057/4616/3815/products/hand-b-a_533x.png?v=1622706881',
+            'image_path' => 'https://img.my-best.com/product_images/b3065a2bb38aecf1f2c66e6d9e533f5f.jpg?ixlib=rails-4.2.0&q=70&lossless=0&w=640&h=640&fit=clip&s=0d5e030edd066fbbe12dd1239a75298f',
             'group_id' => 1
         ]);
 
