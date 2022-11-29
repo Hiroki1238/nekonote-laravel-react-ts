@@ -22,6 +22,7 @@ const Index: React.FC<IndexProps> = (props) => {
             <Authenticated auth={auth}>
                 <div className="mt-10 font-kosugimaru text-gray-600">
                     <div>
+                    <p className="mb-6 text-3xl pl-40">あなたのグループ</p>
                         {groups.map((group: any) => (
                             <div key={group[0].id}>
                                 <div className="w-5/6 mr-auto ml-auto border-2 border-gray-300 p-6 hover:border-4">

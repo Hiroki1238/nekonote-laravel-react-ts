@@ -25,7 +25,7 @@ export default function Authenticated({ auth, header, children}: Props) {
                             <ApplicationLogo className="w-28 h-auto pt-3 mr-5 fill-current text-gray-500" />
                         </Link>
                     </div>
-                    <div className="w-60 text-center text-2xl font-black text-blue-400 ml-5 mt-6 px-7 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg border-blue-400 border-2">
+                    <div className="w-60 text-center text-2xl font-black text-blue-400 ml-5 mt-6 px-7 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg border-blue-400 border-2 hover:text-blue-500">
                         <Link href="/">ホーム</Link>
                     </div>
 

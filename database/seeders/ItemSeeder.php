@@ -69,5 +69,32 @@ class ItemSeeder extends Seeder
             'group_id' => 1,
         ]);
 
+        DB::table('items')->insert([
+            'name' => '松田のマヨネーズ 辛口',
+            'description' => 'これ以外のマヨネーズは買わないでください。',
+            'stock' => '1',
+            'url' => null,
+            'image_path' => 'https://image.rakuten.co.jp/mayhappy/cabinet/siro/imgrc0078221591.jpg',
+            'group_id' => 1,
+        ]);
+
+        // DB::table('items')->insert([
+        //     'name' => '松田のマヨネーズ 辛口',
+        //     'description' => '無くなる前に買ってください。',
+        //     'stock' => '2',
+        //     'url' => null,
+        //     'image_path' => 'https://image.rakuten.co.jp/mayhappy/cabinet/siro/imgrc0078221591.jpg',
+        //     'group_id' => 2,
+        // ]);
+
+        DB::table('items')->insert([
+            'name' => '丸見屋 のりたま',
+            'description' => '無くなる前に買い足して大丈夫です。',
+            'stock' => '3',
+            'url' => null,
+            'image_path' => 'https://thumbnail.image.rakuten.co.jp/@0_mall/p-tano/cabinet/shohin500/563-9375.jpg',
+            'group_id' => 1,
+        ]);
+
     }
 }
