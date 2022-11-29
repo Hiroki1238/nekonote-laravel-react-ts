@@ -17,7 +17,7 @@ export default function Authenticated({ auth, header, children}: Props) {
         useState(false);
 
     return (
-        <div className="min-h-screen max-h-full bg-white">
+        <div className="min-h-screen max-h-full bg-white font-kosugimaru text-gray-700">
             <nav className="bg-white border-b border-gray-100">
                 <div className="flex sm:justify-center items-center pt-6 sm:pt-0 bg-white border-b-2 border-gray-400">
                     <div>
@@ -25,23 +25,23 @@ export default function Authenticated({ auth, header, children}: Props) {
                             <ApplicationLogo className="w-28 h-auto pt-3 mr-5 fill-current text-gray-500" />
                         </Link>
                     </div>
-                    <div className="w-60 text-center font-black text-blue-400 ml-5 mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg border-blue-400 border-2">
+                    <div className="w-60 text-center text-2xl font-black text-blue-400 ml-5 mt-6 px-7 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg border-blue-400 border-2">
                         <Link href="/">ホーム</Link>
                     </div>
 
-                    <div className="w-60  text-center mt-6 px-6 py-4 font-black text-green-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-green-400 border-2">
+                    <div className="w-60 text-center text-2xl mt-6 px-7 py-4 font-black text-green-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-green-400 border-2">
                         <Link href={`/mypage/${auth.user.id}`} >マイページ</Link>
                     </div>
 
-                    <div className="w-60  text-center mt-6 px-6 py-4 font-black text-yellow-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-yellow-400 border-2">
-                        <Link href="/tasks/1">タスク一覧</Link>
+                    <div className="w-60  text-center text-2xl mt-6 px-7 py-4 font-black text-yellow-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-yellow-400 border-2">
+                        <Link href={`/groups/tasks`}>タスク一覧</Link>
                     </div>
 
-                    <div className="w-60 text-center mt-6 px-6 py-4 font-black  text-purple-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-purple-400 border-2">
-                        <Link href="/items/1">商品一覧</Link>
+                    <div className="w-60 text-center text-2xl mt-6 px-7 py-4 font-black  text-purple-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-purple-400 border-2">
+                        <Link href={`/groups/items`}>商品一覧</Link>
                     </div>
 
-                    <div className="w-60 text-center mt-6 px-6 py-4 font-black text-red-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-red-400 border-2">
+                    <div className="w-60 text-center text-2xl mt-6 px-7 py-4 font-black text-red-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-red-400 border-2">
                         <Link method="post" href={route("logout")} as="button">
                             ログアウト
                         </Link>
@@ -97,15 +97,15 @@ export default function Authenticated({ auth, header, children}: Props) {
                                 {group.name}
                             </Link> */}
 
-                            <p className="mt-3">バイト</p>
+                            <p className="mt-3 text-2xl">バイト</p>
 
-                            <p className="mt-3">会社</p>
+                            <p className="mt-3 text-2xl">会社</p>
 
-                            <p className="mt-3">ネコ軍団</p>
+                            <p className="mt-3 text-2xl">ネコ軍団</p>
 
-                            <p className="mt-3">サイドバー（仮）</p>
+                            <p className="mt-3 text-2xl">サイドバー（仮）</p>
 
-                            <p className="mt-3"></p>
+                            <p className="mt-3 text-2xl"></p>
                         </div>
                     {/* ))}
                 </div> */}

@@ -20,20 +20,20 @@ console.log(props);
 <Authenticated auth={auth} >
 <div className="mb-4 font-kosugimaru text-gray-700">
             {tasks.map((task:any) => (
-                <div key={task.id}>
+                <div key={task[0].id}>
                         <div className="mx-10 mt-10 px-3 py-4 border-2 border-gray-300">
                             <Link
                                 className="text-link-blue text-2xl hover:text-link-blue2"
-                                href={`/tasks/${task.id}`}
+                                href={`/tasks/${task[0].id}`}
                             >
                               <div className="flex">
                                <div>
-                                <img className="h-24 w-auto mr-6" src={task.item.image_path}/>
+                                <img className="h-24 w-auto mr-6" src={task[0].item.image_path}/>
                                 </div>
                                 <div>
-                                <p className="mb-1">商品名：{task.item.name}</p>
-                                <p className="mb-1">依頼者：{task.user.user_name}</p>
-                                <p>説明：{task.description}</p>
+                                <p className="mb-1">商品名：{task[0].item.name}</p>
+                                <p className="mb-1">依頼者：{task[0].user.user_name}</p>
+                                <p>説明：{task[0].description}</p>
                                 </div>
                                 </div>
                             </Link>
