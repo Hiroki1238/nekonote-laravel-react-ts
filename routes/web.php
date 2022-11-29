@@ -59,10 +59,8 @@ Route::controller(HomeController::class)->group(function () {
 });
 
 Route::controller(MypageController::class)->group(function () {
-    Route::get("/mypage", "index");
+    Route::get("/mypage/{auth}", "index");
 });
-// Route::get('/test', function () {
-//     return Inertia::render('Home/Index');
-// });
+
 
 require __DIR__ . '/auth.php';
