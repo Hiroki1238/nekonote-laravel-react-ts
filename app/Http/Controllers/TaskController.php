@@ -14,8 +14,9 @@ class TaskController extends Controller
     {
         $tasks = DB::table('task_user')->where('user_id', Auth::id())->get();
         //$tasks = Task::with('item','user','taskUsers')->get();
-        $auth_groups = array(); //↑上のコードで取得したgroup_idのレコードをgroupsテーブルから取ってくる
+        //$auth_groups = array(); 
 
+        //上のコードで取得したgroup_idのレコードをgroupsテーブルから取ってくる
         foreach($tasks as $task){
             $auth_tasks[] = Task::with('item','user','taskUsers')->where('id',$task->task_id)->get(); //groupsテーブルのカラムを配列に格納
         }
