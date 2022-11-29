@@ -30,7 +30,7 @@ export default function Authenticated({ auth, header, children}: Props) {
                     </div>
 
                     <div className="w-60  text-center mt-6 px-6 py-4 font-black text-green-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-green-400 border-2">
-                        <Link href="/mypage">マイページ</Link>
+                        <Link href={`/mypage/${auth.user.id}`} >マイページ</Link>
                     </div>
 
                     <div className="w-60  text-center mt-6 px-6 py-4 font-black text-yellow-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-yellow-400 border-2">
