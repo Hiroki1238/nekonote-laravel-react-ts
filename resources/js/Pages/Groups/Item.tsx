@@ -18,7 +18,7 @@ console.log(props);
     <div>
  {  auth.user != null ? (
 <Authenticated auth={auth} >
-<div className="mb-4 font-kosugimaru text-gray-700 flex justify-center">
+  <div className="mb-4 font-kosugimaru text-gray-700 flex justify-left flex-wrap"> {/* flex-wrapと書くと折り返しが可能になる */}
             {items.map((item:any) => (
                 <div key={item.id}>
                         <div className="mt-10 px-3 py-4 border-2 border-gray-300 w-items-x h-items-y hover:border-4">

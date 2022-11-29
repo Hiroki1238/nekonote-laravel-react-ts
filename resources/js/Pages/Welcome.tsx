@@ -12,7 +12,7 @@ export default function Welcome(props: any) {
                             href={route("dashboard")}
                             className="text-sm text-gray-700 underline"
                         >
-                            Dashboard
+                            ダッシュボード
                         </Link>
                     ) : (
                         <>
@@ -20,14 +20,14 @@ export default function Welcome(props: any) {
                                 href={route("login")}
                                 className="text-sm text-gray-700 underline"
                             >
-                                Log in
+                                ログイン
                             </Link>
 
                             <Link
                                 href={route("register")}
                                 className="ml-4 text-sm text-gray-700 underline"
                             >
-                                Register
+                                新規登録
                             </Link>
                         </>
                     )}
