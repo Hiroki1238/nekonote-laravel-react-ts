@@ -25,24 +25,6 @@ class ItemSeeder extends Seeder
         ]);
 
         DB::table('items')->insert([
-            'name' => 'アポロ',
-            'description' => '普通のアポロの方です。',
-            'stock' => '2',
-            'url' => null,
-            'image_path' => 'https://www.meiji.co.jp/products/chocolate/assets/img/05079.jpg',
-            'group_id' => 2,
-        ]);
-
-        DB::table('items')->insert([
-            'name' => 'アポロ',
-            'description' => '普通のアポロの方です。',
-            'stock' => '2',
-            'url' => null,
-            'image_path' => 'https://www.meiji.co.jp/products/chocolate/assets/img/05079.jpg',
-            'group_id' => 3,
-        ]);
-
-        DB::table('items')->insert([
             'name' => 'SUNTORY 天然水 2L',
             'description' => 'この水が売っていたら必ずこれを買ってください。',
             'stock' => '6',

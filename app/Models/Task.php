@@ -16,7 +16,7 @@ class Task extends Model
 
     public function user() //依頼者用
     {
-        return $this->belongsTo(User::class)->withPivot('task_user');;
+        return $this->belongsTo(User::class);
     }
 
     public function item()

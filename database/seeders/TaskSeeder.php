@@ -35,7 +35,7 @@ class TaskSeeder extends Seeder
             'deadline' => now(),
             'description' => '無かったら似たようなもので良いです。',
             'quantity' => 3,
-            'user_id' => 2,
+            'user_id' => 3,
             'item_id' => 3,
         ]);
 
@@ -43,7 +43,7 @@ class TaskSeeder extends Seeder
             'deadline' => now(),
             'description' => '急いではいません。',
             'quantity' => 3,
-            'user_id' => 2,
+            'user_id' => 4,
             'item_id' => 4,
         ]);
 
@@ -51,7 +51,7 @@ class TaskSeeder extends Seeder
             'deadline' => now(),
             'description' => '急いではいません。',
             'quantity' => 2,
-            'user_id' => 3,
+            'user_id' => 1,
             'item_id' => 5,
         ]);
     }

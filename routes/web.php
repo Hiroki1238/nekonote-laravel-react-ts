@@ -40,18 +40,18 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::controller(GroupController::class)->group(function () {
-    Route::get("/groups/{user}", "index");
-});
-
 Route::controller(TaskController::class)->group(function () {
-    Route::get("/tasks", "index");
-    Route::get("/tasks/{task}", "show");
+    Route::get("/groups/tasks", "index");
+    Route::get("/groups/tasks/{task}", "show");
 });
 
 Route::controller(ItemController::class)->group(function () {
-    Route::get("/items", "index");
-    Route::get("/items/{item}", "show");
+    Route::get("/groups/items", "index");
+    Route::get("/groups/items/{item}", "show");
+});
+
+Route::controller(GroupController::class)->group(function () {
+    Route::get("/groups/{user}", "index");
 });
 
 Route::controller(HomeController::class)->group(function () {
