@@ -4,6 +4,7 @@ import Dropdown from "@/Components/Dropdown";
 import NavLink from "@/Components/NavLink";
 import ResponsiveNavLink from "@/Components/ResponsiveNavLink";
 import { Link } from "@inertiajs/inertia-react";
+import { group } from "console";
 
 interface Props {
     auth?: any;
@@ -11,45 +12,41 @@ interface Props {
     children: React.ReactNode;
 }
 
-export default function Authenticated({ auth, header, children }: Props) {
+export default function Authenticated({ auth, header, children}: Props) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] =
         useState(false);
 
     return (
         <div className="min-h-screen max-h-full bg-white">
             <nav className="bg-white border-b border-gray-100">
-            <div className="flex sm:justify-center items-center pt-6 sm:pt-0 bg-white border-b-2 border-gray-400">
-                <div>
-                    <Link href="/">
-                        <ApplicationLogo className="w-28 h-auto pt-3 mr-5 fill-current text-gray-500" />
-                    </Link>
-                </div>
-                <div className="w-60 text-center font-black text-blue-400 ml-5 mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg border-blue-400 border-2">
-                    <Link href="/">ホーム</Link>
-                </div>
+                <div className="flex sm:justify-center items-center pt-6 sm:pt-0 bg-white border-b-2 border-gray-400">
+                    <div>
+                        <Link href="/">
+                            <ApplicationLogo className="w-28 h-auto pt-3 mr-5 fill-current text-gray-500" />
+                        </Link>
+                    </div>
+                    <div className="w-60 text-center font-black text-blue-400 ml-5 mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg border-blue-400 border-2">
+                        <Link href="/">ホーム</Link>
+                    </div>
 
-                <div className="w-60  text-center mt-6 px-6 py-4 font-black text-green-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-green-400 border-2">
-                    <Link href="/mypage">マイページ</Link>
-                </div>
+                    <div className="w-60  text-center mt-6 px-6 py-4 font-black text-green-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-green-400 border-2">
+                        <Link href="/mypage">マイページ</Link>
+                    </div>
 
-                <div className="w-60  text-center mt-6 px-6 py-4 font-black text-yellow-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-yellow-400 border-2">
-                    <Link href="/tasks/1">タスク一覧</Link>
-                </div>
+                    <div className="w-60  text-center mt-6 px-6 py-4 font-black text-yellow-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-yellow-400 border-2">
+                        <Link href="/tasks/1">タスク一覧</Link>
+                    </div>
 
-                <div className="w-60 text-center mt-6 px-6 py-4 font-black  text-purple-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-purple-400 border-2">
-                    <Link href="/items/1">商品一覧</Link>
-                </div>
+                    <div className="w-60 text-center mt-6 px-6 py-4 font-black  text-purple-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-purple-400 border-2">
+                        <Link href="/items/1">商品一覧</Link>
+                    </div>
 
-                <div className="w-60 text-center mt-6 px-6 py-4 font-black text-red-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-red-400 border-2">
-                <Link
-                                method="post"
-                                href={route("logout")}
-                                as="button"
-                            >
-                                ログアウト
-                            </Link>
+                    <div className="w-60 text-center mt-6 px-6 py-4 font-black text-red-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-red-400 border-2">
+                        <Link method="post" href={route("logout")} as="button">
+                            ログアウト
+                        </Link>
+                    </div>
                 </div>
-            </div>
 
                 <div
                     className={
@@ -90,21 +87,28 @@ export default function Authenticated({ auth, header, children }: Props) {
             </nav>
             <main className="flex max-w-full h-full justify-around">
                 <div className="w-1/6 bg-white border-r-2 border-gray-400 text-center">
+                    {/* {groups.map((group) => (
+                        <div key={group.id}>
+                            <Link
+                                method="post"
+                                href={`/items/${group.id}`}
+                                //as="button"
+                            >
+                                {group.name}
+                            </Link> */}
 
-                    <p className="mt-3">家族</p>
+                            <p className="mt-3">バイト</p>
 
-                    <p className="mt-3">バイト</p>
+                            <p className="mt-3">会社</p>
 
-                    <p className="mt-3">会社</p>
+                            <p className="mt-3">ネコ軍団</p>
 
-                    <p className="mt-3">ネコ軍団</p>
+                            <p className="mt-3">サイドバー（仮）</p>
 
-                    <p className="mt-3">サイドバー（仮）</p>
-
-                    <p className="mt-3"></p>
-
-                    
-                </div>
+                            <p className="mt-3"></p>
+                        </div>
+                    {/* ))}
+                </div> */}
 
                 <div className="w-5/6 pl-5 bg-white">{children}</div>
             </main>
@@ -116,10 +120,7 @@ export default function Authenticated({ auth, header, children }: Props) {
 
                     <div>
                         <p className="pt-11 pr-7">
-                            <Link
-                                href="/"
-                                className="no-underline text-3xl"
-                            >
+                            <Link href="/" className="no-underline text-3xl">
                                 トップ
                             </Link>
                         </p>
@@ -138,10 +139,7 @@ export default function Authenticated({ auth, header, children }: Props) {
 
                     <div>
                         <p className="pt-11 pr-7">
-                            <Link
-                                href=""
-                                className="no-underline text-3xl"
-                            >
+                            <Link href="" className="no-underline text-3xl">
                                 仮タイトル
                             </Link>
                         </p>
@@ -149,10 +147,7 @@ export default function Authenticated({ auth, header, children }: Props) {
 
                     <div>
                         <p className="pt-11 pr-24">
-                            <Link
-                                href=""
-                                className="no-underline text-3xl"
-                            >
+                            <Link href="" className="no-underline text-3xl">
                                 仮タイトル
                             </Link>
                         </p>
@@ -163,8 +158,6 @@ export default function Authenticated({ auth, header, children }: Props) {
                     Copyright © 2022 NEKONOTE CORPORATION. All Rights Reserved.
                 </p>
             </footer>
-
-            
         </div>
     );
 }

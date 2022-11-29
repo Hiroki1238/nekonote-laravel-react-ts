@@ -9,8 +9,9 @@ class Group extends Model
 {
     use HasFactory;
 
-    public function groupedUsers()   //中間テーブル
+    public function users()   //中間テーブル
     {
-      return $this->belongsToMany(User::class);
+      //return $this->belongsToMany(User::class)->withPivot(['group_id','user_id']);
+      return $this->belongsToMany(User::class, 'group_user', 'group_id', 'user_id')->withPivot(['group_id','user_id']);
     }
 }
