@@ -20,6 +20,8 @@ class VehicleSeeder extends Seeder
             'bicycle' => 0,
             'mortorcycle' => 0,
             'car' => 1,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
         ]);
 
         DB::table('vehicles')->insert([
@@ -27,6 +29,8 @@ class VehicleSeeder extends Seeder
             'bicycle' => 1,
             'mortorcycle' => 0,
             'car' => 0,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
         ]);
 
         DB::table('vehicles')->insert([
@@ -34,6 +38,8 @@ class VehicleSeeder extends Seeder
             'bicycle' => 0,
             'mortorcycle' => 1,
             'car' => 0,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
         ]);
 
         DB::table('vehicles')->insert([
@@ -41,6 +47,8 @@ class VehicleSeeder extends Seeder
             'bicycle' => 0,
             'mortorcycle' => 0,
             'car' => 1,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
         ]);
     }
 }

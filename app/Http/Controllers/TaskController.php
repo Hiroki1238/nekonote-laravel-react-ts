@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Task;
+use App\Models\{Task, Group};
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Auth;
@@ -18,7 +18,7 @@ class TaskController extends Controller
 
         //上のコードで取得したgroup_idのレコードをgroupsテーブルから取ってくる
         foreach($tasks as $task){
-            $auth_tasks[] = Task::with('item','user','taskUsers')->where('id',$task->task_id)->get(); //groupsテーブルのカラムを配列に格納
+            $auth_tasks[] = Task::with('item','user','taskUsers')->where('id',$task->task_id)->orderBy('deadline','DESC')->get(); //groupsテーブルのカラムを配列に格納
         }
         return Inertia::render('Groups/Task',['tasks' => $auth_tasks]); 
     }
