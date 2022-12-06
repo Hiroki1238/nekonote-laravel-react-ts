@@ -12,7 +12,7 @@ interface Props {
     children: React.ReactNode;
 }
 
-export default function Authenticated({ auth, header, children}: Props) {
+export default function Authenticated({ auth, header, children }: Props) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] =
         useState(false);
 
@@ -30,7 +30,7 @@ export default function Authenticated({ auth, header, children}: Props) {
                     </div>
 
                     <div className="w-60 text-center text-2xl mt-6 px-7 py-4 font-black text-green-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-green-400 border-2">
-                        <Link href={`/mypage/${auth.user.id}`} >マイページ</Link>
+                        <Link href={`/mypage/${auth.user.id}`}>マイページ</Link>
                     </div>
 
                     <div className="w-60  text-center text-2xl mt-6 px-7 py-4 font-black text-yellow-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-yellow-400 border-2">
@@ -97,43 +97,20 @@ export default function Authenticated({ auth, header, children}: Props) {
                                 {group.name}
                             </Link> */}
 
-<<<<<<< HEAD
-                            <p className="mt-3 text-2xl">バイト</p>
+                    <p className="mt-3 text-2xl">バイト</p>
 
-                            <p className="mt-3 text-2xl">会社</p>
+                    <p className="mt-3 text-2xl">会社</p>
 
-                            <p className="mt-3 text-2xl">ネコ軍団</p>
+                    <p className="mt-3 text-2xl">ネコ軍団</p>
 
-                            <p className="mt-3 text-2xl">サイドバー（仮）</p>
-
-                            <p className="mt-3 text-2xl"></p>
-                        </div>
-                    {/* ))}
+                    <p className="mt-3 text-2xl"></p>
+                </div>
+                {/* ))}
                 </div> */}
 
                 <div className="w-5/6 pl-5 bg-white">{children}</div>
             </main>
             <footer className="bg-white mt-10 border-t-2 border-gray-400 sticky w-full">
-=======
-                    <p className="mt-3 text-blue-400">家族</p>
-
-                    <p className="mt-3 text-green-400">バイト</p>
-
-                    <p className="mt-3 text-yellow-400">会社</p>
-
-                    <p className="mt-3 text-purple-400">ネコ軍団</p>
-
-                    <p className="mt-3 text-red-400">サイドバー（仮）</p>
-
-                    <p className="mt-3"></p>
-
-                    
-                </div>
-
-                <div className="w-5/6 pl-5 bg-white">{children}</div>
-            </main>
-            <footer className="bg-white border-t-2 border-gray-400">
->>>>>>> e397609 ([fix]デザインの修正)
                 <div className="flex">
                     <div className="pt-9 mr-auto">
                         <ApplicationLogo className="h-16 ml-16" />

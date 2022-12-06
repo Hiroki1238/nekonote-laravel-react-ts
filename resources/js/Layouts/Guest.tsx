@@ -21,7 +21,7 @@ export default function Guest({ children }: Props) {
                     </div>
 
                     <div className="w-60 text-center text-2xl mt-6 px-7 py-4 font-black text-green-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-green-400 border-2">
-                        <Link href={route("login")} >マイページ</Link>
+                        <Link href={route("login")}>マイページ</Link>
                     </div>
 
                     <div className="w-60  text-center text-2xl mt-6 px-7 py-4 font-black text-yellow-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-yellow-400 border-2">
@@ -33,18 +33,35 @@ export default function Guest({ children }: Props) {
                     </div>
 
                     <div className="w-60 text-center text-2xl mt-6 px-7 py-4 font-black text-red-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-red-400 border-2">
-                    <Link href={route("login")}>ログイン</Link>
-                </div>
-            </div>
-            <main className="flex max-w-full h-full justify-around">
-                <div className="w-1/6">
-                    <p><Link href=""></Link></p>
+                        <Link href={route("login")}>ログイン</Link>
                     </div>
+                </div>
+                <main className="flex max-w-full h-full justify-around">
+                    <div className="w-1/6 bg-white border-r-2 border-gray-400 text-center">
+                        {/* {groups.map((group) => (
+                        <div key={group.id}>
+                            <Link
+                                method="post"
+                                href={`/items/${group.id}`}
+                                //as="button"
+                            >
+                                {group.name}
+                            </Link> */}
 
-            </main>
+                        <p className="mt-3 text-2xl">バイト</p>
+
+                        <p className="mt-3 text-2xl">会社</p>
+
+                        <p className="mt-3 text-2xl">ネコ軍団</p>
+
+                        <p className="mt-3 text-2xl"></p>
+                    </div>
+                    {/* ))}
+                </div> */}
+
+                    <div className="w-5/6 pl-5 bg-white">{children}</div>
+                </main>
             </nav>
-
-            <main>{children}</main>
             <footer className="bg-white mt-10 border-t-2 border-gray-400 sticky w-full">
                 <div className="flex">
                     <div className="pt-9 mr-auto">
@@ -53,10 +70,7 @@ export default function Guest({ children }: Props) {
 
                     <div>
                         <p className="pt-11 pr-7">
-                            <Link
-                                href="/"
-                                className="no-underline text-3xl"
-                            >
+                            <Link href="/" className="no-underline text-3xl">
                                 トップ
                             </Link>
                         </p>
@@ -75,10 +89,7 @@ export default function Guest({ children }: Props) {
 
                     <div>
                         <p className="pt-11 pr-7">
-                            <Link
-                                href=""
-                                className="no-underline text-3xl"
-                            >
+                            <Link href="" className="no-underline text-3xl">
                                 仮タイトル
                             </Link>
                         </p>
@@ -86,10 +97,7 @@ export default function Guest({ children }: Props) {
 
                     <div>
                         <p className="pt-11 pr-24">
-                            <Link
-                                href=""
-                                className="no-underline text-3xl"
-                            >
+                            <Link href="" className="no-underline text-3xl">
                                 仮タイトル
                             </Link>
                         </p>
