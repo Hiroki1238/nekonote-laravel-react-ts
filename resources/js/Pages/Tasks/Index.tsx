@@ -9,7 +9,7 @@ interface IndexProps {
     tasks: any;
 }
 
-const Task: React.FC<IndexProps> = (props) => {
+const Index: React.FC<IndexProps> = (props) => {
     const { auth, tasks } = props;
     // const Index :any = (props : any) => {
     // const {user,auth} = props;
@@ -19,8 +19,9 @@ const Task: React.FC<IndexProps> = (props) => {
         <div>
             {auth.user != null ? (
                 <Authenticated auth={auth}>
+                  <p>このページを採用したい</p>
                     <div className="mt-10">
-                        <p className="mb-6 text-3xl pl-36">あなたのタスク</p>
+                    <p className="mb-6 text-3xl pl-36">あなたのタスク</p>
                         <TaskList tasks={tasks} />
                     </div>
                 </Authenticated>
@@ -33,4 +34,4 @@ const Task: React.FC<IndexProps> = (props) => {
     );
 };
 
-export default Task;
+export default Index;

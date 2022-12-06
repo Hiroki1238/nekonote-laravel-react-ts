@@ -42,6 +42,8 @@ Route::middleware('auth')->group(function () {
 
 Route::controller(TaskController::class)->group(function () {
     Route::get("/groups/tasks", "index");
+    Route::get("/groups/tasks/create", "create");
+    Route::post("/groups/tasks/store", "store");
     Route::get("/groups/tasks/{task}", "show");
 });
 
