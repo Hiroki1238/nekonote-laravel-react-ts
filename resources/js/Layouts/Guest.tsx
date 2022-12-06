@@ -8,31 +8,32 @@ interface Props {
 
 export default function Guest({ children }: Props) {
     return (
-        <div>
-            <div className="flex sm:justify-center items-center pt-6 sm:pt-0 bg-white border-b-2 border-gray-400">
-                <div>
-                    <Link href="/">
-                        <ApplicationLogo className="w-28 h-auto pt-3 mr-5 fill-current text-gray-500" />
-                    </Link>
-                </div>
-                <div className="w-40 text-center font-black text-blue-400 ml-5 mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg border-blue-400 border-2">
-                    <Link href="/">ホーム</Link>
-                </div>
+        <div className="min-h-screen max-h-full bg-white font-kosugimaru text-gray-700">
+            <nav className="bg-white border-b border-gray-100">
+                <div className="flex sm:justify-center items-center pt-6 sm:pt-0 bg-white border-b-2 border-gray-400">
+                    <div>
+                        <Link href="/">
+                            <ApplicationLogo className="w-28 h-auto pt-3 mr-5 fill-current text-gray-500" />
+                        </Link>
+                    </div>
+                    <div className="w-60 text-center text-2xl font-black text-blue-400 ml-5 mt-6 px-7 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg border-blue-400 border-2">
+                        <Link href="/">ホーム</Link>
+                    </div>
 
-                <div className="w-40  text-center mt-6 px-6 py-4 font-black text-green-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-green-400 border-2">
-                    <Link href="/mypage">マイページ</Link>
-                </div>
+                    <div className="w-60 text-center text-2xl mt-6 px-7 py-4 font-black text-green-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-green-400 border-2">
+                        <Link href={route("login")} >マイページ</Link>
+                    </div>
 
-                <div className="w-40  text-center mt-6 px-6 py-4 font-black text-yellow-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-yellow-400 border-2">
-                    <Link href="/tasks/1">タスク一覧</Link>
-                </div>
+                    <div className="w-60  text-center text-2xl mt-6 px-7 py-4 font-black text-yellow-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-yellow-400 border-2">
+                        <Link href={route("login")}>タスク一覧</Link>
+                    </div>
 
-                <div className="w-40 text-center mt-6 px-6 py-4 font-black  text-purple-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-purple-400 border-2">
-                    <Link href="/items/1">商品一覧</Link>
-                </div>
+                    <div className="w-60 text-center text-2xl mt-6 px-7 py-4 font-black  text-purple-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-purple-400 border-2">
+                        <Link href={route("login")}>商品一覧</Link>
+                    </div>
 
-                <div className="w-40 text-center mt-6 px-6 py-4 font-black text-red-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-red-400 border-2">
-                    <Link href="/login">ログイン</Link>
+                    <div className="w-60 text-center text-2xl mt-6 px-7 py-4 font-black text-red-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-red-400 border-2">
+                    <Link href={route("login")}>ログイン</Link>
                 </div>
             </div>
             <main className="flex max-w-full h-full justify-around">
@@ -41,9 +42,10 @@ export default function Guest({ children }: Props) {
                     </div>
 
             </main>
+            </nav>
 
             <main>{children}</main>
-            <footer className="bg-white mt-10 border-t-2 border-gray-400">
+            <footer className="bg-white mt-10 border-t-2 border-gray-400 sticky w-full">
                 <div className="flex">
                     <div className="pt-9 mr-auto">
                         <ApplicationLogo className="h-16 ml-16" />

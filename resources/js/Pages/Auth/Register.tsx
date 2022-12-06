@@ -43,13 +43,13 @@ export default function Register() {
 
             <ValidationErrors errors={errors} />
 
-            <form onSubmit={submit}>
+            <form className="mt-12 w-1/2 mr-auto ml-auto" onSubmit={submit}>
                 <div>
-                    <Label forInput="first_name" value="氏" />
+                    <Label className="text-2xl" forInput="first_name" value="氏" />
 
                     <Input
                         type="text"
-                        name="name"
+                        name="first_name"
                         value={data.first_name}
                         className="mt-1 block w-full"
                         autoComplete="name"
@@ -60,13 +60,13 @@ export default function Register() {
                 </div>
 
                 <div>
-                    <Label forInput="last_name" value="名" />
+                    <Label className="text-2xl" forInput="last_name" value="名" />
 
                     <Input
                         type="text"
-                        name="name"
+                        name="last_name"
                         value={data.last_name}
-                        className="mt-1 block w-full"
+                        className="mt-1  block w-full"
                         autoComplete="name"
                         isFocused={true}
                         handleChange={onHandleChange}
@@ -75,11 +75,11 @@ export default function Register() {
                 </div>
 
                 <div>
-                    <Label forInput="user_name" value="アカウント名" />
+                    <Label className="text-2xl" forInput="user_name" value="アカウント名" />
 
                     <Input
                         type="text"
-                        name="name"
+                        name="user_name"
                         value={data.user_name}
                         className="mt-1 block w-full"
                         autoComplete="name"
@@ -90,7 +90,7 @@ export default function Register() {
                 </div>
 
                 <div className="mt-4">
-                    <Label forInput="email" value="Eメール" />
+                    <Label className="text-2xl" forInput="email" value="Eメール" />
 
                     <Input
                         type="email"
@@ -104,7 +104,7 @@ export default function Register() {
                 </div>
 
                 <div className="mt-4">
-                    <Label forInput="password" value="パスワード" />
+                    <Label className="text-2xl" forInput="password" value="パスワード" />
 
                     <Input
                         type="password"
@@ -118,9 +118,7 @@ export default function Register() {
                 </div>
 
                 <div className="mt-4">
-                    <Label
-                        forInput="password_confirmation"
-                        value="パスワードの確認"
+                    <Label className="text-2xl" forInput="password_confirmation" value="パスワードの確認"
                     />
 
                     <Input
@@ -136,16 +134,16 @@ export default function Register() {
                 <div className="flex items-center justify-end mt-4">
                     <Link
                         href={route("login")}
-                        className="underline text-sm text-gray-600 hover:text-gray-900"
+                        className="underline text-lg text-gray-600 hover:text-gray-900"
                     >
                         ログインはこちら
                     </Link>
 
                     <Button
-                        className="ml-4 bg-white text-blue-400 mr-3 border-blue-400 border-2"
+                        className="ml-4 text-xl font-black bg-white text-blue-400 mr-3 border-blue-400 border-2"
                         processing={processing}
                     >
-                        新規登録する
+                        新規登録
                     </Button>
                 </div>
             </form>

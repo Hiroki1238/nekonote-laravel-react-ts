@@ -24,6 +24,8 @@ class UserSeeder extends Seeder
             'password' => Hash::make('nekoneko'),
             'image_path' => null,
             'vehicle_id' => 1,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
         ]);
 
         DB::table('users')->insert([
@@ -34,6 +36,8 @@ class UserSeeder extends Seeder
             'password' => Hash::make('aaiiuueeoo'),
             'image_path' => null,
             'vehicle_id' => 2,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
         ]);
 
         DB::table('users')->insert([
@@ -44,6 +48,8 @@ class UserSeeder extends Seeder
             'password' => Hash::make('abcdefgh'),
             'image_path' => null,
             'vehicle_id' => 3,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
         ]);
 
         DB::table('users')->insert([
@@ -54,6 +60,8 @@ class UserSeeder extends Seeder
             'password' => Hash::make('abcd1234'),
             'image_path' => null,
             'vehicle_id' => 4,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
         ]);
     }
 }

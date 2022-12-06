@@ -15,9 +15,10 @@ module.exports = {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans], zenmaru: ["Zen Maru Gothic"], kosugimaru: ["Kosugi Maru"],
             },
             height: {
-                neko: '120px',
+                'items-y': '490px', //商品一覧
               },
             width: {
+                'items-x':'350px', //商品一覧
                 '1/9': '0.11111111%',
                 '1/8': '12.5%',
                 '1/7': '14.2857143%',

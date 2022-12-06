@@ -42,7 +42,7 @@ export default function Login({ status, canResetPassword }: Props) {
 
     return (
         <Guest>
-            <Head title="ログイン" />
+            <Head title="login" />
 
             {status && (
                 <div className="mb-4 font-medium text-sm text-green-600">
@@ -52,24 +52,28 @@ export default function Login({ status, canResetPassword }: Props) {
 
             <ValidationErrors errors={errors} />
 
-            <div className="text-right">
+            <div className="text-right mt-4 mr-6">
                 <Link
                     href={route("register")}
-                    className="underline mb-2 text-sm text-gray-600 hover:text-gray-900"
+                    className="underline text-lg text-gray-600 hover:text-gray-900"
                 >
                     新規登録はこちら
                 </Link>
             </div>
 
-            <form onSubmit={submit}>
+            <form className="mt-10 w-1/2 mr-auto ml-auto" onSubmit={submit}>
                 <div>
-                    <Label forInput="email" value="Email" />
+                    <Label
+                        className="text-2xl"
+                        forInput="email"
+                        value="メールアドレス"
+                    />
 
                     <Input
                         type="text"
                         name="email"
                         value={data.email}
-                        className="mt-1 block w-full"
+                        className="mt-1 mb-8 block w-full"
                         autoComplete="username"
                         isFocused={true}
                         handleChange={onHandleChange}
@@ -77,7 +81,11 @@ export default function Login({ status, canResetPassword }: Props) {
                 </div>
 
                 <div className="mt-4">
-                    <Label forInput="password" value="Password" />
+                    <Label
+                        className="text-2xl"
+                        forInput="password"
+                        value="パスワード"
+                    />
 
                     <Input
                         type="password"
@@ -97,7 +105,7 @@ export default function Login({ status, canResetPassword }: Props) {
                             handleChange={onHandleChange}
                         />
 
-                        <span className="ml-2 text-sm text-gray-600">
+                        <span className="ml-2 text-lg text-gray-600">
                             ログイン情報を記憶する
                         </span>
                     </label>
@@ -107,20 +115,25 @@ export default function Login({ status, canResetPassword }: Props) {
                     {canResetPassword && (
                         <Link
                             href={route("password.request")}
-                            className="underline text-sm text-gray-600 hover:text-gray-900"
+                            className="underline text-lg text-gray-600 hover:text-gray-900"
                         >
                             パスワードを忘れた方はこちら
                         </Link>
                     )}
 
                     <Button
-                        className="ml-4 bg-gray-900"
+                        className="ml-4 text-xl font-black bg-white text-blue-400 mr-3 border-blue-400 border-2"
                         processing={processing}
                     >
                         ログイン
                     </Button>
                 </div>
             </form>
+            <div className="text-gray-500 mt-44 px-3 py-4 border-2 border-gray-300 w-1/3 mr-auto ml-auto">
+                <p className="text-3xl mb-4">テストアカウント</p>
+                <p className="text-2xl mb-1">メールアドレス: neko@gmail.com</p>
+                <p className="text-2xl">パスワード: nekoneko</p>
+                </div>
         </Guest>
     );
 }

@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
         $this->call(LikeSeeder::class);
         $this->call(TaskSeeder::class);
         $this->call(TaskUserSeeder::class);
+        $this->call(GroupUserSeeder::class);
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([

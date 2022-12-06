@@ -38,8 +38,9 @@ export default function Input({
                 name={name}
                 value={value}
                 max={max}
+                // 以下のclassNameのcssは編集済み
                 className={
-                    `border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm ` +
+                    `border-gray-400 text-2xl py-3 px-4 focus:border-indigo-300 focus:ring-opacity-50 rounded-md shadow-sm ` +
                     className
                 }
                 ref={input}

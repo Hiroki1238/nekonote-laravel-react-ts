@@ -42,9 +42,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function myGroups()   //中間テーブル
+    public function groups()   //中間テーブル
     {
-      return $this->belongsToMany(Group::class);
+      return $this->belongsToMany(Group::class, 'group_user', 'group_id', 'user_id')->withPivot(['group_id','user_id']);
     }
 
     public function vehicle()
@@ -52,12 +52,12 @@ class User extends Authenticatable
         return $this->belongsTo(Vehicle::class);
     }
 
-    public function myTasks()   //中間テーブル //引き受けたタスク
+    public function myTasks()   //中間テーブル //引受人用
     {
       return $this->belongsToMany(Task::class);
     }
 
-    public function tasks()
+    public function tasks() //依頼者用
     {
       return $this->hasMany(Task::class);
     }
