@@ -22,6 +22,7 @@ const Index: React.FC<IndexProps> = (props) => {
     // const {user,auth} = props;
     console.log(props);
     return (
+
         <Authenticated auth={auth}>
             <div className="mt-10 font-kosugimaru text-gray-600">
                 <p className="mb-6 text-3xl pl-36">あなたのグループ</p>
