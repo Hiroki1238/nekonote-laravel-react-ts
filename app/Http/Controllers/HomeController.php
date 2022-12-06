@@ -10,6 +10,11 @@ use App\Models\Task;
 
 class HomeController extends Controller
 {
+    public function top()
+    {
+        return Inertia::render('Home/Top'); 
+    }
+
     public function index()
     {
          //2: タスクの取得
