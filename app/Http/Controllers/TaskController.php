@@ -17,18 +17,16 @@ class TaskController extends Controller
         //$auth_groups = array(); 
 
         //上のコードで取得したgroup_idのレコードをgroupsテーブルから取ってくる
-        foreach($tasks as $task){
-            $auth_tasks[] = Task::with('item','user','taskUsers')->where('id',$task->task_id)->orderBy('deadline','DESC')->get(); //groupsテーブルのカラムを配列に格納
+        foreach ($tasks as $task) {
+            $auth_tasks[] = Task::with('item', 'user', 'taskUsers')->where('id', $task->task_id)->get(); //groupsテーブルのカラムを配列に格納
         }
-        return Inertia::render('Groups/Task',['tasks' => $auth_tasks]); 
+        return Inertia::render('Groups/Task', ['tasks' => $auth_tasks]);
     }
+
+    public function create(Task $task)
+    {
+       
+        return Inertia::render('Tasks/Create');
+    }
+
 }
-
-// return Inertia::render('Home/Index', ['prefecture_array' => $prefecture->getRegionList(), 'reviews' => $reviews]);
-
-$groups = DB::table('group_user')->where('user_id', Auth::id())->get(); //これでAuth::id()とgroup_idの全組み合わせが取れる
-        $auth_groups = array(); //↑上のコードで取得したgroup_idのレコードをgroupsテーブルから取ってくる
-
-        foreach($groups as $group){
-            $auth_groups[] = Group::with('item','user','taskUsers')->where('id',$group->group_id)->get(); //groupsテーブルのカラムを配列に格納
-        }
