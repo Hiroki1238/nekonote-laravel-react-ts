@@ -41,15 +41,15 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::controller(TaskController::class)->group(function () {
-    Route::get("/groups/tasks", "index");
     Route::get("/groups/tasks/create", "create");
     Route::post("/groups/tasks/store", "store");
-    Route::get("/groups/tasks/{task}", "show");
+    Route::get("/groups/tasks/{group}", "index");
+    //Route::get("/groups/tasks/{task}", "show");
 });
 
 Route::controller(ItemController::class)->group(function () {
-    Route::get("/groups/items", "index");
-    Route::get("/groups/items/{item}", "show");
+    Route::get("/groups/items/{group}", "index");
+    Route::get("/groups/items/{group}/{item}", "show");
 });
 
 Route::controller(GroupController::class)->group(function () {
