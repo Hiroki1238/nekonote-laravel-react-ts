@@ -38,6 +38,17 @@ class ItemSeeder extends Seeder
         ]);
 
         DB::table('items')->insert([
+            'name' => 'SUNTORY 天然水 2L',
+            'description' => 'amazonで買ってもいいです。',
+            'stock' => '3',
+            'url' => null,
+            'image_path' => 'https://m.media-amazon.com/images/I/71x5x6kYruL._AC_SX679_PIbundle-9,TopRight,0,0_SH20_.jpg',
+            'group_id' => 3,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
+        ]);
+
+        DB::table('items')->insert([
             'name' => 'ミヨシ 無添加せっけん 泡のハンドソープ',
             'description' => '無くなる前に買ってください！',
             'stock' => '7',
@@ -92,14 +103,27 @@ class ItemSeeder extends Seeder
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
 
-        // DB::table('items')->insert([
-        //     'name' => '松田のマヨネーズ 辛口',
-        //     'description' => '無くなる前に買ってください。',
-        //     'stock' => '2',
-        //     'url' => null,
-        //     'image_path' => 'https://image.rakuten.co.jp/mayhappy/cabinet/siro/imgrc0078221591.jpg',
-        //     'group_id' => 2,
-        // ]);
+        DB::table('items')->insert([
+            'name' => '松田のマヨネーズ 辛口',
+            'description' => '無くなる前に買ってください。',
+            'stock' => '2',
+            'url' => null,
+            'image_path' => 'https://image.rakuten.co.jp/mayhappy/cabinet/siro/imgrc0078221591.jpg',
+            'group_id' => 2,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
+        ]);
+
+        DB::table('items')->insert([
+            'name' => '松田のマヨネーズ 辛口',
+            'description' => 'これが一番美味しいのでこれ以外買わないでください。',
+            'stock' => '1',
+            'url' => null,
+            'image_path' => 'https://image.rakuten.co.jp/mayhappy/cabinet/siro/imgrc0078221591.jpg',
+            'group_id' => 3,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
+        ]);
 
         DB::table('items')->insert([
             'name' => '丸見屋 のりたま',
@@ -108,6 +132,17 @@ class ItemSeeder extends Seeder
             'url' => null,
             'image_path' => 'https://thumbnail.image.rakuten.co.jp/@0_mall/p-tano/cabinet/shohin500/563-9375.jpg',
             'group_id' => 1,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
+        ]);
+
+        DB::table('items')->insert([
+            'name' => 'きのこの山とたけのこの里 12袋',
+            'description' => '常に3袋くらいストックします。',
+            'stock' => '4',
+            'url' => null,
+            'image_path' => 'https://www.meiji.co.jp/products/chocolate/assets/img/07910.jpg',
+            'group_id' => 3,
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);

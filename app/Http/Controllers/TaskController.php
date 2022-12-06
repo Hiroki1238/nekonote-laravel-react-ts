@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 
 class TaskController extends Controller
 {
-    public function index(Task $task)
+    public function index(Task $task, $group_id)
     {
         $tasks = DB::table('task_user')->where('user_id', Auth::id())->get();
         //$tasks = Task::with('item','user','taskUsers')->get();
@@ -25,8 +25,7 @@ class TaskController extends Controller
 
     public function create(Task $task)
     {
-       
+
         return Inertia::render('Tasks/Create');
     }
-
 }

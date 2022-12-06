@@ -20,13 +20,7 @@ const Index: React.FC<IndexProps> = (props) => {
             {auth.user != null ? (
                 <Authenticated auth={auth}>
                     <div>
-                        <p className="text-center font-bold text-gray-500 mt-36 text-3xl">
-                            トップページは現在製作中です
-                        </p>
-                        <img
-                            className="w-2/3 h-auto"
-                            src="https://kao-h.assetsadobe3.com/is/image/content/dam/sites/kao/www-kao-co-jp/cat-health/common/images/disease/cat_image1.jpeg?fmt=jpeg&qlt=85&wid=1680"
-                        />
+
                     </div>
                     <div className="mt-10">
                     <p className="mb-6 text-3xl pl-36">締切が近いタスク（まだ並び替えてない）</p>
