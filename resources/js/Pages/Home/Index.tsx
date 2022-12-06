@@ -1,14 +1,17 @@
 import React, { Children } from 'react';
 import Authenticated from "@/Layouts/Authenticated";
 import Guest from "@/Layouts/Guest";
+import { Link } from "@inertiajs/inertia-react";
+import TaskList from '@/Components/Task/TaskList';
 
 interface IndexProps {
   auth: any;
   //user:any;
+  tasks: any;
 }
  
 const Index:React.FC<IndexProps> = (props) => {
-  const { auth } = props;
+  const { auth,tasks } = props;
 // const Index :any = (props : any) => {
 // const {user,auth} = props;
  
@@ -17,9 +20,11 @@ const Index:React.FC<IndexProps> = (props) => {
  {  auth.user != null ? (
 <Authenticated auth={auth} >
   <div>
+    
     <p className="text-center font-bold text-gray-500 mt-36 text-3xl">トップページは現在製作中です</p>
 <img className="w-2/3 h-auto" src="https://kao-h.assetsadobe3.com/is/image/content/dam/sites/kao/www-kao-co-jp/cat-health/common/images/disease/cat_image1.jpeg?fmt=jpeg&qlt=85&wid=1680"/>
 </div>
+<TaskList tasks={tasks}/>
 </Authenticated>
  ):(
  <Guest>

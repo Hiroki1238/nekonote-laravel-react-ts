@@ -20,6 +20,8 @@ class GroupSeeder extends Seeder
             'description' => '毎週火曜日活動',
             'invitation_code' => null,
             'image_path' => null,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
         ]);
 
         DB::table('groups')->insert([
@@ -27,6 +29,8 @@ class GroupSeeder extends Seeder
             'description' => '猫山家その1',
             'invitation_code' => null,
             'image_path' => null,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
         ]);
 
         DB::table('groups')->insert([
@@ -34,6 +38,8 @@ class GroupSeeder extends Seeder
             'description' => '水曜日休業(水曜日は買い出しに行かないでください)',
             'invitation_code' => null,
             'image_path' => null,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
         ]);
     }
 }

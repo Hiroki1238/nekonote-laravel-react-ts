@@ -20,6 +20,8 @@ class TaskUserSeeder extends Seeder
             'user_id' => 2,
             //'requestor_id' => 1,
             'status' => 0,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
         ]);
 
         DB::table('task_user')->insert([
@@ -27,6 +29,8 @@ class TaskUserSeeder extends Seeder
             'user_id' => 3,
             //'requestor_id' => 1,
             'status' => 0,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
         ]);
 
         DB::table('task_user')->insert([
@@ -34,6 +38,8 @@ class TaskUserSeeder extends Seeder
             'user_id' => 4,
             //'requestor_id' => 1,
             'status' => 1,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
         ]);
 
         DB::table('task_user')->insert([
@@ -41,6 +47,8 @@ class TaskUserSeeder extends Seeder
             'user_id' => 1,
             //'requestor_id' => 2,
             'status' => 0,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
         ]);
 
         DB::table('task_user')->insert([
@@ -48,6 +56,8 @@ class TaskUserSeeder extends Seeder
             'user_id' => 3,
             //'requestor_id' => 2,
             'status' => 1,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
         ]);
 
         DB::table('task_user')->insert([
@@ -55,6 +65,8 @@ class TaskUserSeeder extends Seeder
             'user_id' => 4,
             //'requestor_id' => 4,
             'status' => 0,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
         ]);
 
         DB::table('task_user')->insert([
@@ -62,6 +74,8 @@ class TaskUserSeeder extends Seeder
             'user_id' => 1,
             //'requestor_id' => 4,
             'status' => 0,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
         ]);
 
         DB::table('task_user')->insert([
@@ -69,6 +83,8 @@ class TaskUserSeeder extends Seeder
             'user_id' => 2,
             //'requestor_id' => 4,
             'status' => 0,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
         ]);
 
         DB::table('task_user')->insert([
@@ -76,6 +92,8 @@ class TaskUserSeeder extends Seeder
             'user_id' => 4,
             //'requestor_id' => 4,
             'status' => 0,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
         ]);
 
         DB::table('task_user')->insert([
@@ -83,6 +101,8 @@ class TaskUserSeeder extends Seeder
             'user_id' => 1,
             //'requestor_id' => 4,
             'status' => 0,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
         ]);
 
         DB::table('task_user')->insert([
@@ -90,6 +110,8 @@ class TaskUserSeeder extends Seeder
             'user_id' => 2,
             //'requestor_id' => 4,
             'status' => 0,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
         ]);
 
     }
