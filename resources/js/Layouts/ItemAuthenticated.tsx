@@ -21,12 +21,12 @@ export default function ItemAuthenticated({ auth, header, children }: Props) {
             <nav className="bg-white border-b border-gray-100">
                 <div className="flex sm:justify-center items-center pt-6 sm:pt-0 bg-white border-b-2 border-gray-400">
                     <div>
-                        <Link href="/">
+                        <Link href="/home">
                             <ApplicationLogo className="w-28 h-auto pt-3 mr-5 fill-current text-gray-500" />
                         </Link>
                     </div>
                     <div className="w-60 text-center text-2xl font-black text-blue-400 ml-5 mt-6 px-7 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg border-blue-400 border-2 hover:text-blue-500">
-                        <Link href="/">ホーム</Link>
+                        <Link href="/home">ホーム</Link>
                     </div>
 
                     <div className="w-60 text-center text-2xl mt-6 px-7 py-4 font-black text-green-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-green-400 border-2">
