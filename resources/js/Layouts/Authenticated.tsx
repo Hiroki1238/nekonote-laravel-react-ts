@@ -101,7 +101,6 @@ export default function Authenticated({ auth, header, children }: Props) {
                     <p className="mt-3 text-2xl">会社</p>
                     <p className="mt-3 text-2xl">ネコ軍団</p>
                     <p className="mt-3 text-2xl">サイドバー（仮）</p>
-                    <p className="mt-3 text-2xl"></p>
                 </div>
                 {/* ))}
                 </div> */}
