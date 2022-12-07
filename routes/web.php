@@ -57,12 +57,12 @@ Route::controller(GroupController::class)->group(function () {
 });
 
 Route::controller(HomeController::class)->group(function () {
-    Route::get("/", "index");
+    Route::get("/", "top");
+    Route::get("/home", "index");
 });
 
 Route::controller(MypageController::class)->group(function () {
     Route::get("/mypage/{auth}", "index");
 });
-
 
 require __DIR__ . '/auth.php';

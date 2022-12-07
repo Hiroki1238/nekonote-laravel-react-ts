@@ -26,7 +26,7 @@ export default function Authenticated({ auth, header, children}: Props) {
                         </Link>
                     </div>
                     <div className="w-60 text-center text-2xl font-black text-blue-400 ml-5 mt-6 px-7 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg border-blue-400 border-2 hover:text-blue-500">
-                        <Link href="/">ホーム</Link>
+                        <Link href="/home">ホーム</Link>
                     </div>
 
                     <div className="w-60 text-center text-2xl mt-6 px-7 py-4 font-black text-green-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-green-400 border-2">
@@ -50,10 +50,7 @@ export default function Authenticated({ auth, header, children}: Props) {
 
                 <div
                     className={
-                        (showingNavigationDropdown ? "block" : "hidden") +
-                        " sm:hidden"
-                    }
-                >
+                        (showingNavigationDropdown ? "block" : "hidden") + " sm:hidden"}>
                     <div className="pt-2 pb-3 space-y-1">
                         <ResponsiveNavLink
                             href={route("dashboard")}

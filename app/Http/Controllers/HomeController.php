@@ -22,4 +22,9 @@ class HomeController extends Controller
          
         return Inertia::render('Home/Index',['tasks' => $auth_tasks]); 
     }
+
+    public function top()
+    {       
+        return Inertia::render('Home/Top'); 
+    }
 }
