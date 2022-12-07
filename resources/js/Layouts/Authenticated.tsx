@@ -12,7 +12,7 @@ interface Props {
     children: React.ReactNode;
 }
 
-export default function Authenticated({ auth, header, children }: Props) {
+export default function Authenticated({ auth, header, children}: Props) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] =
         useState(false);
 
@@ -30,7 +30,7 @@ export default function Authenticated({ auth, header, children }: Props) {
                     </div>
 
                     <div className="w-60 text-center text-2xl mt-6 px-7 py-4 font-black text-green-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-green-400 border-2">
-                        <Link href={`/mypage/${auth.user.id}`}>マイページ</Link>
+                        <Link href={`/mypage/${auth.user.id}`} >マイページ</Link>
                     </div>
 
                     <div className="w-60  text-center text-2xl mt-6 px-7 py-4 font-black text-yellow-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-yellow-400 border-2">
@@ -97,12 +97,13 @@ export default function Authenticated({ auth, header, children }: Props) {
                                 {group.name}
                             </Link> */}
 
-                    <p className="mt-3 text-2xl">バイト</p>
-                    <p className="mt-3 text-2xl">会社</p>
-                    <p className="mt-3 text-2xl">ネコ軍団</p>
-                    <p className="mt-3 text-2xl">サイドバー（仮）</p>
-                </div>
-                {/* ))}
+                            <p className="mt-3 text-2xl">バイト</p>
+                            <p className="mt-3 text-2xl">会社</p>
+                            <p className="mt-3 text-2xl">ネコ軍団</p>
+                            <p className="mt-3 text-2xl">サイドバー（仮）</p>
+                            <p className="mt-3 text-2xl"></p>
+                        </div>
+                    {/* ))}
                 </div> */}
 
                 <div className="w-5/6 pl-5 bg-white">{children}</div>
