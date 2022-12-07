@@ -12,7 +12,7 @@ interface Props {
     children: React.ReactNode;
 }
 
-export default function Authenticated({ auth, header, children }: Props) {
+export default function ItemAuthenticated({ auth, header, children }: Props) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] =
         useState(false);
 
@@ -96,19 +96,30 @@ export default function Authenticated({ auth, header, children }: Props) {
                             >
                                 {group.name}
                             </Link> */}
-                            
-                            <p className="mt-3 text-2xl">バイト</p>
-                            <p className="mt-3 text-2xl">会社</p>
-                            <p className="mt-3 text-2xl">ネコ軍団</p>
-                            <p className="mt-3 text-2xl">サイドバー（仮）</p>
-                            <p className="mt-3 text-2xl"></p>
-                        </div>
-                    {/* ))}
+
+                    <p className="mt-3 text-2xl">
+                        <Link href="/groups/items/1">バイト</Link>
+                    </p>
+
+                    <p className="mt-3 text-2xl">
+                        <Link href="/groups/items/2">会社</Link>
+                    </p>
+
+                    <p className="mt-3 text-2xl">
+                        <Link href="/groups/items/3">ネコ軍団</Link>
+                    </p>
+
+                    <p className="mt-3 text-2xl">
+                        <Link href="/groups/items/4">サイドバー（仮）</Link>
+                    </p>
+
+                    <p className="mt-3 text-2xl"></p>
+                </div>
+                {/* ))}
                 </div> */}
 
                 <div className="w-5/6 pl-5 bg-white">{children}</div>
             </main>
-
             <footer className="bg-white mt-10 border-t-2 border-gray-400 sticky w-full">
                 <div className="flex">
                     <div className="pt-9 mr-auto">

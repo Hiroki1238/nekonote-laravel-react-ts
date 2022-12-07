@@ -1,6 +1,8 @@
 import React, { Children } from "react";
 import Authenticated from "@/Layouts/Authenticated";
 import { Link } from "@inertiajs/inertia-react";
+import Button from "@/Components/Button";
+import TaskList from "@/Components/Task/TaskList";
 
 interface Props {
     children: React.ReactNode;
@@ -20,97 +22,48 @@ const Index: React.FC<IndexProps> = (props) => {
     // const {user,auth} = props;
     console.log(props);
     return (
-<<<<<<< HEAD
-            <Authenticated auth={auth}>
-                <div className="mt-10 font-kosugimaru text-gray-600">
-                    <p className="mb-6 text-3xl pl-40">あなたのグループ</p>
-                        {groups.map((group: any) => (
-                            <div key={group[0].id}>
-                                <div className="w-5/6 mr-auto ml-auto border-2 border-gray-300 p-6 hover:border-4">
-                                    <Link
-                                        className="text-link-blue text-2xl"
-                                        href={`/groups/${group[0].id}`}
-                                    >
-                                        <div className="flex">
-                                            <div className="w-20 x-auto mr-10">
-                                                {group[0].image_path !==
-                                                null ? (
-                                                    <img
-                                                        className="rounded-full aspect-square object-cover border-2 border-gray-300"
-                                                        src={
-                                                            group[0].image_path
-                                                        }
-                                                    />
-                                                ) : (
-                                                    <img
-                                                        className="rounded-full aspect-square object-cover border-2 border-gray-300"
-                                                        src="https://nekoillust.com/wp-content/uploads/2018/09/fff58fe9323f47c3a7a689b42017d63e.jpg"
-                                                    />
-                                                )}
-                                            </div>
-                                            <div>
-                                                <p className="mb-4 text-3xl">
-                                                    {group[0].name}
-                                                </p>
-                                                <p>{group[0].description}</p>
-                                            </div>
-                                        </div>
-                                    </Link>
-                                </div>
-                            </div>
-                        ))}
-                </div>
 
-                <div className="mt-20 mb-4 font-kosugimaru text-gray-700">
-                <p className="mb-6 text-3xl pl-40">あなたのグループ</p>
-            {tasks.map((task:any) => (
-                <div key={task[0].id}>
+        <Authenticated auth={auth}>
+            <div className="mt-10 font-kosugimaru text-gray-600">
+                <p className="mb-6 text-3xl pl-36">あなたのグループ</p>
+                {groups.map((group: any) => (
+                    <div key={group[0].id}>
                         <div className="w-5/6 mr-auto ml-auto border-2 border-gray-300 p-6 hover:border-4">
                             <Link
-                                className="text-link-blue text-2xl hover:text-link-blue2"
-                                href={`/tasks/${task[0].id}`}
+                                className="text-link-blue text-2xl"
+                                href={`/groups/${group[0].id}`}
                             >
-                              <div className="flex">
-                               <div>
-                                <img className="h-24 w-auto mr-6" src={task[0].item.image_path}/>
-                                </div>
-                                <div>
-                                <p className="mb-1">商品名：{task[0].item.name}</p>
-                                <p className="mb-1">依頼者：{task[0].user.user_name}</p>
-                                <p>説明：{task[0].description}</p>
-                                </div>
+                                <div className="flex">
+                                    <div className="w-20 x-auto mr-10">
+                                        {group[0].image_path !== null ? (
+                                            <img
+                                                className="rounded-full aspect-square object-cover border-2 border-gray-300"
+                                                src={group[0].image_path}
+                                            />
+                                        ) : (
+                                            <img
+                                                className="rounded-full aspect-square object-cover border-2 border-gray-300"
+                                                src="https://nekoillust.com/wp-content/uploads/2018/09/fff58fe9323f47c3a7a689b42017d63e.jpg"
+                                            />
+                                        )}
+                                    </div>
+                                    <div>
+                                        <p className="mb-4 text-3xl">
+                                            {group[0].name}
+                                        </p>
+                                        <p>{group[0].description}</p>
+                                    </div>
                                 </div>
                             </Link>
                         </div>
-                </div>
-            ))}
-        </div>
-            </Authenticated>
+                    </div>
+                ))}
+            </div>
+
+            <p className="mt-10 mb-6 text-3xl pl-36">あなたのタスク</p>
+            <TaskList tasks={tasks} />
+        </Authenticated>
     );
 };
-=======
-      <div>
-  <Authenticated auth={auth} >
-    <div className="text-center ">
-<div className="border-2 mt-3 border-blue-400">名前　猫山　イヌ男</div>
-<div className="border-2 mt-3 border-green-400"> アカウント名　ゴリラ</div>
-<div className="border-2 mt-3 border-yellow-400"><Link href={`/groups/${auth.user.id}`}>所属しているグループ</Link>
-<p >家族</p>
-<p>バイト</p>
-<p>会社</p>
-<p>ネコ軍団</p>
-</div>
-<div className=" mt-3 mb-5">
-<Link href="" className="border-2 border-purple-400 text-purple-400">編集</Link>
-</div>
-  </div>
-  </Authenticated>
-   
-      </div>
-   );
-  }
-  
-  export default Index
->>>>>>> e397609 ([fix]デザインの修正)
 
 export default Index;

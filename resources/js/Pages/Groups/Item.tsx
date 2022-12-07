@@ -1,6 +1,6 @@
 import React, { Children } from 'react';
 import { Link } from "@inertiajs/inertia-react";
-import Authenticated from "@/Layouts/Authenticated";
+import ItemAuthenticated from "@/Layouts/ItemAuthenticated";
 import Guest from "@/Layouts/Guest";
 
 interface IndexProps {
@@ -17,7 +17,7 @@ console.log(props);
   return (
     <div>
  {  auth.user != null ? (
-<Authenticated auth={auth} >
+<ItemAuthenticated auth={auth} >
   <div className="mb-4 font-kosugimaru text-gray-700 flex justify-left flex-wrap"> {/* flex-wrapと書くと折り返しが可能になる */}
             {items.map((item:any) => (
                 <div key={item.id}>
@@ -33,13 +33,14 @@ console.log(props);
                                 <p className="mb-4 text-3xl text-center">{item.name}</p>
                                 <p className="text-2xl">{item.description}</p>
                                 <p className="text-2xl text-red-700 mt-4">在庫：{item.stock}個</p>
+                                （group_id：{item.group_id}）
                                 </div>
                             </Link>
                         </div>
                 </div>
             ))}
         </div>
-</Authenticated>
+</ItemAuthenticated>
  ):(
  <Guest>
   <div>

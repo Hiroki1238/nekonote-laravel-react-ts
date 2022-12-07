@@ -1,6 +1,6 @@
 import React, { Children } from "react";
 import { Link } from "@inertiajs/inertia-react";
-import TaskAuthenticated from "@/Layouts/TaskAuthenticated";
+import Authenticated from "@/Layouts/Authenticated";
 import Guest from "@/Layouts/Guest";
 import TaskList from "@/Components/Task/TaskList";
 
@@ -9,7 +9,7 @@ interface IndexProps {
     tasks: any;
 }
 
-const Task: React.FC<IndexProps> = (props) => {
+const Index: React.FC<IndexProps> = (props) => {
     const { auth, tasks } = props;
     // const Index :any = (props : any) => {
     // const {user,auth} = props;
@@ -18,13 +18,13 @@ const Task: React.FC<IndexProps> = (props) => {
     return (
         <div>
             {auth.user != null ? (
-                <TaskAuthenticated auth={auth}>
+                <Authenticated auth={auth}>
+                  <p>このページを採用したい</p>
                     <div className="mt-10">
-                        ※タスクはまだグループごとに表示を分けられていない
-                        <p className="mb-6 text-3xl pl-36">あなたのタスク</p>
+                    <p className="mb-6 text-3xl pl-36">あなたのタスク</p>
                         <TaskList tasks={tasks} />
                     </div>
-                </TaskAuthenticated>
+                </Authenticated>
             ) : (
                 <Guest>
                     <div>後でゲストはみれなくする</div>
@@ -34,4 +34,4 @@ const Task: React.FC<IndexProps> = (props) => {
     );
 };
 
-export default Task;
+export default Index;
