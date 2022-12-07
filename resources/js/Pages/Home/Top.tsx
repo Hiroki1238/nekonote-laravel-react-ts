@@ -4,10 +4,11 @@ import Guest from "@/Layouts/Guest";
 import { Link } from "@inertiajs/inertia-react";
 
 interface TopProps {
-    //user:any;
+    auth: any;
 }
 
 const Top: React.FC<TopProps> = (props) => {
+        const { auth } = props;
     // const Index :any = (props : any) => {
     // const {user,auth} = props;
 
@@ -23,7 +24,7 @@ const Top: React.FC<TopProps> = (props) => {
                 />
             </div>
         </Guest>
-    );
+        );
 };
 
 export default Top;
