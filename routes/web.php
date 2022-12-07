@@ -57,8 +57,8 @@ Route::controller(GroupController::class)->group(function () {
 });
 
 Route::controller(HomeController::class)->group(function () {
-    Route::get("/nekonote", "top");
-    Route::get("/", "index");
+    Route::get("/", "top");
+    Route::get("/home", "index");
 });
 
 Route::controller(MypageController::class)->group(function () {
