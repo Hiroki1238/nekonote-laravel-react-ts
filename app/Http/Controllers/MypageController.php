@@ -14,7 +14,6 @@ class MypageController extends Controller
     {
         //1: グループの取得
         $groups = DB::table('group_user')->where('user_id', Auth::id())->get(); //これでAuth::id()とgroup_idの全組み合わせが取れる
-        //$auth_groups = array();
 
         //上のコードで取得したgroup_idのレコードをgroupsテーブルから取ってくる
         foreach($groups as $group){
@@ -23,14 +22,7 @@ class MypageController extends Controller
 
         //2: タスクの取得
         $tasks_id = DB::table('task_user')->where('user_id', Auth::id())->get()->pluck('task_id')->toArray();
-        //$auth_groups = array();
-        //dd($tasks_id);
-        
-
-        //foreach($tasks as $task){
-            //$auth_tasks[] = Task::with('item','user','taskUsers')->where('id',$task->task_id)->get();
-            $auth_tasks[] = Task::with('item','user','taskUsers')->whereIn('id', $tasks_id)->get();
-        //}
+        $auth_tasks[] = Task::with('item','user','taskUsers')->whereIn('id', $tasks_id)->orderBy('deadline','ASC')->get();
         
         return Inertia::render("Mypage/Index", ['groups' => $auth_groups,  'tasks' => $auth_tasks]);
     }
