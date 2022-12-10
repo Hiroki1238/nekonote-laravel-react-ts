@@ -22,14 +22,18 @@ class MypageController extends Controller
         }
 
         //2: タスクの取得
-        $tasks = DB::table('task_user')->where('user_id', Auth::id())->get();
+        $tasks_id = DB::table('task_user')->where('user_id', Auth::id())->get()->pluck('task_id')->toArray();
         //$auth_groups = array();
+        //dd($tasks_id);
+        
 
-        foreach($tasks as $task){
-            $auth_tasks[] = Task::with('item','user','taskUsers')->where('id',$task->task_id)->get();
-        }
+        //foreach($tasks as $task){
+            //$auth_tasks[] = Task::with('item','user','taskUsers')->where('id',$task->task_id)->get();
+            $auth_tasks[] = Task::with('item','user','taskUsers')->whereIn('id', $tasks_id)->get();
+        //}
         
         return Inertia::render("Mypage/Index", ['groups' => $auth_groups,  'tasks' => $auth_tasks]);
     }
 }
 //参考：https://teratail.com/questions/162257?link=qa_related_sp
+//DB:: は表示にしか使えず、これで持ってきたデータを加工できない
