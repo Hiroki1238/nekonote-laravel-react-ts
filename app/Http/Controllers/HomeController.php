@@ -12,13 +12,8 @@ class HomeController extends Controller
 {
     public function index()
     {
-         //2: タスクの取得
-         $tasks = DB::table('task_user')->where('user_id', Auth::id())->get();
-         //$auth_groups = array();
- 
-         foreach($tasks as $task){
-             $auth_tasks[] = Task::with('item','user','taskUsers')->where('id',$task->task_id)->get();
-         }
+        $tasks_id = DB::table('task_user')->where('user_id', Auth::id())->get()->pluck('task_id')->toArray();
+        $auth_tasks[] = Task::with('item','user','taskUsers')->whereIn('id', $tasks_id)->orderBy('deadline','ASC')->get();
          
         return Inertia::render('Home/Index',['tasks' => $auth_tasks]); 
     }
