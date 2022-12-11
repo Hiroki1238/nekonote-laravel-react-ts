@@ -6,7 +6,6 @@ import TaskList from "@/Components/Task/TaskList";
 
 interface IndexProps {
     auth: any;
-    //user:any;
     tasks: any;
 }
 

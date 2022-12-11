@@ -20,7 +20,6 @@ import { Task, TaskProps } from "@/Types/tasks";
 //   name: string;
 //   image_path: string;
 // }
-
 // type User {
 //   id: number;
 //   user_name: string;
