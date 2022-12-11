@@ -34,7 +34,7 @@ export default function ItemAuthenticated({ auth, header, children }: Props) {
                     </div>
 
                     <div className="w-60  text-center text-2xl mt-6 px-7 py-4 font-black text-yellow-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-yellow-400 border-2">
-                        <Link href={`/groups/tasks`}>タスク一覧</Link>
+                        <Link href={`/groups/tasks/1`}>タスク一覧</Link>
                     </div>
 
                     <div className="w-60 text-center text-2xl mt-6 px-7 py-4 font-black  text-purple-400 bg-white shadow-md overflow-hidden sm:rounded-lg border-purple-400 border-2">
