@@ -44,7 +44,7 @@ Route::controller(TaskController::class)->group(function () {
     Route::get("/groups/tasks/create", "create");
     Route::post("/groups/tasks/store", "store");
     Route::get("/groups/tasks/{group}", "index");
-    //Route::get("/groups/tasks/{task}", "show");
+    Route::get("/groups/tasks/detail/{task}", "show");
 });
 
 Route::controller(ItemController::class)->group(function () {
