@@ -13,7 +13,7 @@ interface TaskProps {
       <div className="mb-4 font-kosugimaru text-gray-700">
             {tasks.map((task:any) => (
                 <div key={task[0].id}>
-                        <div className="w-5/6 mr-auto ml-auto mx-10 px-3 py-4 border-2 border-gray-300">
+                        <div className="w-5/6 mb-3 mr-auto ml-auto mx-10 px-3 py-4 border-2 border-gray-300 hover:border-4">
                             <Link
                                 className="text-link-blue text-2xl hover:text-link-blue2"
                                 href={`/tasks/${task[0].id}`}
