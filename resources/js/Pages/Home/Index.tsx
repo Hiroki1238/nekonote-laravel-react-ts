@@ -6,7 +6,6 @@ import TaskList from "@/Components/Task/TaskList";
 
 interface IndexProps {
     auth: any;
-    //user:any;
     tasks: any;
 }
 
@@ -23,7 +22,7 @@ const Index: React.FC<IndexProps> = (props) => {
 
                     </div>
                     <div className="mt-10">
-                    <p className="mb-6 text-3xl pl-36">締切が近いタスク（まだ並び替えてない）</p>
+                    <p className="mb-6 text-3xl pl-36">締切が近いタスク</p>
                     <TaskList tasks={tasks} />
                     </div>
                 </Authenticated>
