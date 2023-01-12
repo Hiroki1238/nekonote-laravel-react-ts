@@ -20,6 +20,7 @@ import { Task, TaskProps } from "@/Types/tasks";
 //   name: string;
 //   image_path: string;
 // }
+
 // type User {
 //   id: number;
 //   user_name: string;
@@ -59,6 +60,9 @@ const TaskList: React.FC<TaskProps> = (props) => {
                                     <p className="text-blue-400 font-bold">
                                         期限：{task.deadline}
                                     </p>
+                                    <div className="mt-10 ml-28">
+                                    <Link className="bg-blue-200 hover:bg-blue-300 px-3 py-2 rounded-xl" href="#">詳細</Link>
+                                    </div>
                                 </div>
                             </div>
                         </Link>
